@@ -1,0 +1,2802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="YonyuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.ApparadusConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="ApparadusConfig">
+          <Key>
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="ApparadusID" />
+            <PropertyRef Name="ApparadusNo" />
+            <PropertyRef Name="ApparadusName" />
+            <PropertyRef Name="ApparadusDescription" />
+            <PropertyRef Name="ApparadusMfgDate" />
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="DisableFlag" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="Werk" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ApparadusID" Type="bigint" Nullable="false" />
+          <Property Name="ApparadusNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApparadusName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApparadusDescription" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApparadusMfgDate" Type="date" Nullable="false" />
+          <Property Name="ManufacturerID" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DisableFlag" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="LmDate" Type="date" Nullable="false" />
+          <Property Name="LmBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.BartenderConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="BartenderConfig">
+          <Key>
+            <PropertyRef Name="bID" />
+          </Key>
+          <Property Name="bID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Version" Type="datetime" />
+          <Property Name="LabelDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="LabelTemplatePath" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.BatchCardPrintRecord' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="BatchCardPrintRecord">
+          <Property Name="MaterialNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrintDate" Type="date" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.BottleCapRecord' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="BottleCapRecord">
+          <Property Name="Date" Type="date" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="5" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaterialNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="Process" Type="nvarchar" MaxLength="10" />
+          <Property Name="CartonID" Type="int" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.CustomerComplaintDescription' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="CustomerComplaintDescription">
+          <Property Name="cID" Type="bigint" />
+          <Property Name="Date" Type="date" />
+          <Property Name="MtTypeItems" Type="nvarchar" MaxLength="60" />
+          <Property Name="DtTypeItems" Type="nvarchar" MaxLength="60" />
+          <Property Name="DefectiveQty" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SampleQty" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Description" Type="nvarchar" MaxLength="600" />
+          <Property Name="Mold" Type="nvarchar" MaxLength="600" />
+          <Property Name="Strategy" Type="nvarchar" MaxLength="600" />
+          <Property Name="Improve" Type="nvarchar" MaxLength="600" />
+          <Property Name="Tracking" Type="nvarchar" MaxLength="600" />
+          <Property Name="Anti" Type="nvarchar" MaxLength="600" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.CustomerComplaintRecord' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="CustomerComplaintRecord">
+          <Key>
+            <PropertyRef Name="cID" />
+          </Key>
+          <Property Name="cID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="date" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="10" />
+          <Property Name="MaterialName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.EventCodeConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="EventCodeConfig">
+          <Key>
+            <PropertyRef Name="eID" />
+          </Key>
+          <Property Name="eID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Version" Type="datetime" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="20" />
+          <Property Name="EventType" Type="nvarchar" MaxLength="60" />
+          <Property Name="EventDescription" Type="nvarchar" MaxLength="60" />
+          <Property Name="EventCode" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.FactoryConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="FactoryConfig">
+          <Key>
+            <PropertyRef Name="fID" />
+          </Key>
+          <Property Name="fID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Version" Type="datetime" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="20" />
+          <Property Name="FactoryName" Type="nvarchar" MaxLength="60" />
+          <Property Name="PalletCodePrefix" Type="nvarchar" MaxLength="10" />
+          <Property Name="SupportWorkCenter" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.FloorInventory' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="FloorInventory">
+          <Key>
+            <PropertyRef Name="fID" />
+          </Key>
+          <Property Name="fID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PalletCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaterialNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="FirstInStock" Type="datetime" />
+          <Property Name="Process" Type="nvarchar" MaxLength="10" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="20" />
+          <Property Name="CartonID" Type="int" />
+          <Property Name="PcsCarton" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="FloorStockID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.FloorStockConfig' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="FloorStockConfig">
+          <Property Name="Version" Type="datetime" />
+          <Property Name="FloorCategory" Type="nvarchar" MaxLength="60" />
+          <Property Name="FloorStockID" Type="nvarchar" MaxLength="20" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.GroupSet' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="GroupSet">
+          <Key>
+            <PropertyRef Name="GroupID" />
+            <PropertyRef Name="GroupNameCn" />
+            <PropertyRef Name="GroupNameEn" />
+          </Key>
+          <Property Name="GroupID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupNameCn" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="GroupNameEn" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Reportlet" Type="ntext" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.LoginLog' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="LoginLog">
+          <Property Name="UserID" Type="nvarchar" MaxLength="20" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+          <Property Name="IPLocation" Type="nvarchar" MaxLength="20" />
+          <Property Name="Result" Type="nvarchar" MaxLength="4" />
+          <Property Name="LogTime" Type="datetime" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.MachineConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="MachineConfig">
+          <Key>
+            <PropertyRef Name="fID" />
+          </Key>
+          <Property Name="fID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Version" Type="datetime" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkCenter" Type="nvarchar" MaxLength="20" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="80" />
+          <Property Name="MachineName" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.ManufacturerConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="ManufacturerConfig">
+          <Key>
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="ManufacturerName" />
+            <PropertyRef Name="DistinguishCode" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="Werk" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ManufacturerID" Type="int" Nullable="false" />
+          <Property Name="ManufacturerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DistinguishCode" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LmDate" Type="date" Nullable="false" />
+          <Property Name="LmBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.MoldConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="MoldConfig">
+          <Key>
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="FactoryID" />
+            <PropertyRef Name="MoldID" />
+            <PropertyRef Name="MoldNo" />
+            <PropertyRef Name="MoldMfgDate" />
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="DisableFlag" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="Werk" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MoldID" Type="bigint" Nullable="false" />
+          <Property Name="MoldNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MoldMfgDate" Type="date" Nullable="false" />
+          <Property Name="ManufacturerID" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DisableFlag" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="LmDate" Type="date" Nullable="false" />
+          <Property Name="LmBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.MoldIDAssociationConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="MoldIDAssociationConfig">
+          <Key>
+            <PropertyRef Name="MoldID" />
+            <PropertyRef Name="ApparadusID" />
+          </Key>
+          <Property Name="MoldID" Type="bigint" Nullable="false" />
+          <Property Name="ApparadusID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.MoldTransaction' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="MoldTransaction">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="MoldID" />
+            <PropertyRef Name="ApparadusID" />
+            <PropertyRef Name="Quantity" />
+            <PropertyRef Name="Usage" />
+            <PropertyRef Name="TransactionTypeNo" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="TransactionID" Type="bigint" Nullable="false" />
+          <Property Name="Werk" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="MoldID" Type="bigint" Nullable="false" />
+          <Property Name="ApparadusID" Type="bigint" Nullable="false" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Usage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UsingDescription" Type="nvarchar" MaxLength="250" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="250" />
+          <Property Name="TransactionTypeNo" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LmDate" Type="date" Nullable="false" />
+          <Property Name="LmBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.PalletTag' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="PalletTag">
+          <Key>
+            <PropertyRef Name="pID" />
+          </Key>
+          <Property Name="pID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="20" />
+          <Property Name="FactoryPrefix" Type="nvarchar" MaxLength="10" />
+          <Property Name="PalletCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Status" Type="nvarchar" MaxLength="1" />
+          <Property Name="StockID" Type="nvarchar" MaxLength="20" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.PostDateConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="PostDateConfig">
+          <Key>
+            <PropertyRef Name="pID" />
+          </Key>
+          <Property Name="pID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Year" Type="nvarchar" MaxLength="4" />
+          <Property Name="Version" Type="datetime" />
+          <Property Name="RequestDate" Type="datetime" />
+          <Property Name="PostDate" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.Production' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="Production">
+          <Key>
+            <PropertyRef Name="pID" />
+          </Key>
+          <Property Name="pID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FactoryArea" Type="nvarchar" MaxLength="20" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Date" Type="date" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaterialNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaterialName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Process" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProcessDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="CartonID" Type="int" />
+          <Property Name="PcsCarton" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="ProductionQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="PalletCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="5" />
+          <Property Name="QualityTime" Type="datetime" />
+          <Property Name="QualityShift" Type="nvarchar" MaxLength="5" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="StockInOrderNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="PublishDate" Type="datetime" />
+          <Property Name="ProductionType" Type="nvarchar" MaxLength="20" />
+          <Property Name="Weight" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Cavity" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Period" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="wID" Type="bigint" />
+          <Property Name="Editor" Type="nvarchar" MaxLength="20" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.ProductionHoseSummary' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="ProductionHoseSummary">
+          <Property Name="Date" Type="nvarchar" MaxLength="10" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="10" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="10" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="10" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="Process" Type="nvarchar" MaxLength="10" />
+          <Property Name="MaterialName" Type="nvarchar" MaxLength="40" />
+          <Property Name="Weight" Type="nvarchar" MaxLength="10" />
+          <Property Name="MoldCavity" Type="nvarchar" MaxLength="10" />
+          <Property Name="Period" Type="nvarchar" MaxLength="10" />
+          <Property Name="ProductionQty" Type="nvarchar" MaxLength="10" />
+          <Property Name="ScrapQty" Type="nvarchar" MaxLength="10" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="10" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.ProductionLog' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="ProductionLog">
+          <Key>
+            <PropertyRef Name="pID" />
+          </Key>
+          <Property Name="pID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FactoryArea" Type="nvarchar" MaxLength="20" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaterialNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaterialName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Process" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProcessDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="CartonID" Type="int" />
+          <Property Name="PcsCarton" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="ProductionQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="PalletCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="5" />
+          <Property Name="QualityTime" Type="datetime" />
+          <Property Name="QualityShift" Type="nvarchar" MaxLength="5" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="StockInOrderNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="PublishDate" Type="datetime" />
+          <Property Name="ProductionType" Type="nvarchar" MaxLength="20" />
+          <Property Name="Weight" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Cavity" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Period" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="wID" Type="bigint" />
+          <Property Name="Editor" Type="nvarchar" MaxLength="20" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.ProductionScrapDescription' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="ProductionScrapDescription">
+          <Property Name="Date" Type="nvarchar" MaxLength="10" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="10" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="10" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="10" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="Process" Type="nvarchar" MaxLength="10" />
+          <Property Name="ItemNo" Type="int" />
+          <Property Name="MTItem" Type="nvarchar" MaxLength="20" />
+          <Property Name="DTItem" Type="nvarchar" MaxLength="20" />
+          <Property Name="ScrapQty" Type="nvarchar" MaxLength="10" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.ProductionTagSummary' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="ProductionTagSummary">
+          <Property Name="Date" Type="nvarchar" MaxLength="10" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="10" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="10" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="10" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="Process" Type="nvarchar" MaxLength="10" />
+          <Property Name="MaterialName" Type="nvarchar" MaxLength="40" />
+          <Property Name="TotalProductionQty" Type="nvarchar" MaxLength="10" />
+          <Property Name="ProductionQty" Type="nvarchar" MaxLength="10" />
+          <Property Name="ScrapQty" Type="nvarchar" MaxLength="10" />
+          <Property Name="Mold" Type="nvarchar" MaxLength="20" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.ProjectCodeConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="ProjectCodeConfig">
+          <Key>
+            <PropertyRef Name="pID" />
+          </Key>
+          <Property Name="pID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Version" Type="datetime" />
+          <Property Name="ProjectCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProjectDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.QualityInvalidDescription' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="QualityInvalidDescription">
+          <Property Name="qID" Type="bigint" />
+          <Property Name="Date" Type="date" />
+          <Property Name="MtTypeItems" Type="nvarchar" MaxLength="60" />
+          <Property Name="DtTypeItems" Type="nvarchar" MaxLength="60" />
+          <Property Name="DefectiveQty" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SampleQty" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Description" Type="nvarchar" MaxLength="600" />
+          <Property Name="Mold" Type="nvarchar" MaxLength="600" />
+          <Property Name="Strategy" Type="nvarchar" MaxLength="600" />
+          <Property Name="Improve" Type="nvarchar" MaxLength="600" />
+          <Property Name="Tracking" Type="nvarchar" MaxLength="600" />
+          <Property Name="Anti" Type="nvarchar" MaxLength="600" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.QualityInvalidRecord' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="QualityInvalidRecord">
+          <Key>
+            <PropertyRef Name="qID" />
+          </Key>
+          <Property Name="qID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="4" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="10" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="10" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="Process" Type="nvarchar" MaxLength="10" />
+          <Property Name="MaterialName" Type="nvarchar" MaxLength="60" />
+          <Property Name="FirstItemQuality" Type="nvarchar" MaxLength="10" />
+          <Property Name="Status" Type="nvarchar" MaxLength="10" />
+          <Property Name="Hour" Type="nvarchar" MaxLength="2" />
+          <Property Name="Minute" Type="nvarchar" MaxLength="2" />
+          <Property Name="KeepQty" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="KeepStartCartonID" Type="nvarchar" MaxLength="10" />
+          <Property Name="KeepEndCartonID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Result" Type="nvarchar" MaxLength="10" />
+          <Property Name="WorkingTime" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ScrapQty" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Mold" Type="nvarchar" MaxLength="20" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.ReportletLog' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="ReportletLog">
+          <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+          <Property Name="IPLocation" Type="nvarchar" MaxLength="20" />
+          <Property Name="ReportName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LogTime" Type="datetime" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.ReworkScrapRecord' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="ReworkScrapRecord">
+          <Key>
+            <PropertyRef Name="rID" />
+          </Key>
+          <Property Name="rID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="Process" Type="nvarchar" MaxLength="10" />
+          <Property Name="ProcessDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="30" />
+          <Property Name="ReworkScrapQty" Type="nvarchar" MaxLength="30" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="10" />
+          <Property Name="Date" Type="date" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="PublishDate" Type="datetime" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.ScrapDescriptionConfig' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="ScrapDescriptionConfig">
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="10" />
+          <Property Name="DataType" Type="nvarchar" MaxLength="10" />
+          <Property Name="MtTypeItems" Type="nvarchar" MaxLength="20" />
+          <Property Name="DtTypeItems" Type="nvarchar" MaxLength="40" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.ScrapRecord' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="ScrapRecord">
+          <Key>
+            <PropertyRef Name="sID" />
+          </Key>
+          <Property Name="sID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="Process" Type="nvarchar" MaxLength="10" />
+          <Property Name="ProcessDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="30" />
+          <Property Name="ScrapQty" Type="nvarchar" MaxLength="30" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="10" />
+          <Property Name="Date" Type="date" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="PublishDate" Type="datetime" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.StockConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="StockConfig">
+          <Key>
+            <PropertyRef Name="sID" />
+          </Key>
+          <Property Name="sID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Version" Type="datetime2" Precision="7" />
+          <Property Name="AreaID" Type="nvarchar" MaxLength="10" />
+          <Property Name="AreaName" Type="nvarchar" MaxLength="50" />
+          <Property Name="StockID" Type="nvarchar" MaxLength="10" />
+          <Property Name="StockName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.StockInOrder' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="StockInOrder">
+          <Key>
+            <PropertyRef Name="soID" />
+          </Key>
+          <Property Name="soID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StockInOrderNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="RequestDate" Type="datetime" />
+          <Property Name="ReceiveDate" Type="datetime" />
+          <Property Name="StockID" Type="nvarchar" MaxLength="20" />
+          <Property Name="PalletCodes" Type="nvarchar" MaxLength="1000" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="20" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.TradeMarkConfig' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="TradeMarkConfig">
+          <Property Name="TradeMarkName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Col1" Type="nvarchar" MaxLength="20" />
+          <Property Name="Col2" Type="nvarchar" MaxLength="20" />
+          <Property Name="Col3" Type="nvarchar" MaxLength="20" />
+          <Property Name="Col4" Type="nvarchar" MaxLength="20" />
+          <Property Name="Col5" Type="nvarchar" MaxLength="20" />
+          <Property Name="Col6" Type="nvarchar" MaxLength="20" />
+          <Property Name="Col7" Type="nvarchar" MaxLength="20" />
+          <Property Name="Col8" Type="nvarchar" MaxLength="20" />
+          <Property Name="Data1" Type="nvarchar" MaxLength="20" />
+          <Property Name="Data2" Type="nvarchar" MaxLength="20" />
+          <Property Name="Data3" Type="nvarchar" MaxLength="20" />
+          <Property Name="Data4" Type="nvarchar" MaxLength="20" />
+          <Property Name="Data5" Type="nvarchar" MaxLength="20" />
+          <Property Name="Data6" Type="nvarchar" MaxLength="20" />
+          <Property Name="Data7" Type="nvarchar" MaxLength="20" />
+          <Property Name="Data8" Type="nvarchar" MaxLength="20" />
+          <Property Name="CustomerOrderNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="CustomerNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="CartonNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Comment1" Type="nvarchar" MaxLength="20" />
+          <Property Name="Comment2" Type="nvarchar" MaxLength="20" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.TransactionConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="TransactionConfig">
+          <Key>
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="FactoryID" />
+            <PropertyRef Name="TransactionTypeNo" />
+            <PropertyRef Name="TransactionTypeName" />
+            <PropertyRef Name="Plus-Minus Code" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="Werk" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TransactionTypeNo" Type="int" Nullable="false" />
+          <Property Name="TransactionTypeName" Type="int" Nullable="false" />
+          <Property Name="Plus-Minus Code" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LmDate" Type="date" Nullable="false" />
+          <Property Name="LmBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.UserData' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="UserData">
+          <Key>
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="UserID" Type="nvarchar" MaxLength="20" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NameCn" Type="nvarchar" MaxLength="20" />
+          <Property Name="NameEn" Type="nvarchar" MaxLength="40" />
+          <Property Name="Email" Type="nvarchar" MaxLength="40" />
+          <Property Name="GroupID" Type="nvarchar" MaxLength="40" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.WorkerConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="WorkerConfig">
+          <Key>
+            <PropertyRef Name="WorkerId" />
+          </Key>
+          <Property Name="Version" Type="datetime" />
+          <Property Name="WorkerId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Department" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkerNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkerName" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.WorkingHours' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="WorkingHours">
+          <Key>
+            <PropertyRef Name="wID" />
+          </Key>
+          <Property Name="wID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="10" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaterialName" Type="nvarchar" MaxLength="100" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Process" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProcessDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="EventType" Type="nvarchar" MaxLength="20" />
+          <Property Name="EventCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="EventDateTime" Type="datetime" />
+          <Property Name="WorkingTime" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="AbnormalTime" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Workers" Type="nvarchar" MaxLength="50" />
+          <Property Name="OperationType" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProjectCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProductionType" Type="nvarchar" MaxLength="20" />
+          <Property Name="Mold" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Test" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Malfunction" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Adjustment" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="MaterialAbnormal" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="MoldAbnormal" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Other" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="InvalidTime" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="InvalidDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="MoldNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MoldName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DepartmentNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MoldStatus" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProjectDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProductionQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="QualifiedQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Editor" Type="nvarchar" MaxLength="20" />
+          <Property Name="PublishDate" Type="datetime" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.WorkingHoursDescription' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="WorkingHoursDescription">
+          <Key>
+            <PropertyRef Name="wID" />
+          </Key>
+          <Property Name="wID" Type="bigint" Nullable="false" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="10" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="10" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="10" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="Process" Type="nvarchar" MaxLength="10" />
+          <Property Name="EventDateTime" Type="datetime" />
+          <Property Name="MtTypeItems" Type="nvarchar" MaxLength="60" />
+          <Property Name="EventDescription" Type="nvarchar" MaxLength="60" />
+          <Property Name="DtTypeItems" Type="nvarchar" MaxLength="60" />
+          <Property Name="InvalidDescription" Type="nvarchar" MaxLength="600" />
+          <Property Name="Improve" Type="nvarchar" MaxLength="600" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="600" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'YonYu.dbo.WorkingHoursLog' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="WorkingHoursLog">
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Shift" Type="nvarchar" MaxLength="10" />
+          <Property Name="WorkorderNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MaterialName" Type="nvarchar" MaxLength="100" />
+          <Property Name="MachineID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Process" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProcessDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="EventType" Type="nvarchar" MaxLength="20" />
+          <Property Name="EventCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="EventDateTime" Type="datetime" />
+          <Property Name="WorkingTime" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="AbnormalTime" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Workers" Type="nvarchar" MaxLength="50" />
+          <Property Name="OperationType" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProjectCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProductionType" Type="nvarchar" MaxLength="20" />
+          <Property Name="Mold" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Test" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Malfunction" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Adjustment" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="MaterialAbnormal" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="MoldAbnormal" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Other" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="InvalidTime" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="InvalidDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="MoldNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MoldName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DepartmentNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="MoldStatus" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProjectDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProductionQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="QualifiedQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapQty" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Editor" Type="nvarchar" MaxLength="20" />
+          <Property Name="PublishDate" Type="datetime" />
+          <Property Name="LmTime" Type="datetime" />
+        </EntityType>-->
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.YearShiftConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="YearShiftConfig">
+          <Key>
+            <PropertyRef Name="yID" />
+          </Key>
+          <Property Name="yID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Version" Type="datetime" />
+          <Property Name="Year" Type="nvarchar" MaxLength="10" />
+          <Property Name="FactoryID" Type="nvarchar" MaxLength="10" />
+          <Property Name="ShiftID" Type="nvarchar" MaxLength="10" />
+          <Property Name="ShiftIndex" Type="nvarchar" MaxLength="10" />
+          <Property Name="DayNight" Type="nvarchar" MaxLength="10" />
+          <Property Name="ShiftStart" Type="datetime" />
+          <Property Name="ShiftEnd" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ZTIPP0001A">
+          <Key>
+            <PropertyRef Name="MATNR" />
+            <PropertyRef Name="WERKS" />
+          </Key>
+          <Property Name="MATNR" Type="nvarchar" MaxLength="18" Nullable="false" />
+          <Property Name="WERKS" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="MAKTX" Type="nvarchar" MaxLength="40" />
+          <Property Name="MEINS" Type="nvarchar" MaxLength="3" />
+          <Property Name="LGPRO" Type="nvarchar" MaxLength="4" />
+          <Property Name="NTGEW" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="BRGEW" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="GEWEI" Type="nvarchar" MaxLength="3" />
+          <Property Name="ZCARTONQTY" Type="decimal" Precision="5" Scale="0" />
+          <Property Name="ZLABELSIZE" Type="nvarchar" MaxLength="1" />
+          <Property Name="ZINNERTEXT" Type="nvarchar" MaxLength="250" />
+          <Property Name="ZSPEC" Type="nvarchar" MaxLength="30" />
+          <Property Name="ZTEMPERATURE" Type="nvarchar" MaxLength="30" />
+          <Property Name="ZORIGIN" Type="nvarchar" MaxLength="30" />
+          <Property Name="ZMATERIAL2" Type="nvarchar" MaxLength="30" />
+          <Property Name="ZMATERIAL" Type="nvarchar" MaxLength="30" />
+          <Property Name="ZCOLOUR" Type="nvarchar" MaxLength="30" />
+          <Property Name="ZDESC" Type="nvarchar" MaxLength="30" />
+          <Property Name="ZMULTIPLE" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="ZCBM" Type="nvarchar" MaxLength="30" />
+          <Property Name="ZUPC_CODE" Type="nvarchar" MaxLength="30" />
+          <Property Name="ZCGC_PART_NUMBER" Type="nvarchar" MaxLength="30" />
+          <Property Name="KUNNR" Type="nvarchar" MaxLength="10" />
+          <Property Name="NAME1" Type="nvarchar" MaxLength="35" />
+          <Property Name="KDMAT" Type="nvarchar" MaxLength="35" />
+          <Property Name="POSTX" Type="nvarchar" MaxLength="100" />
+          <Property Name="ZFR1" Type="decimal" Precision="5" Scale="0" />
+          <Property Name="ZCAVITY" Type="nvarchar" MaxLength="10" />
+          <Property Name="RBTXT" Type="nvarchar" MaxLength="20" />
+          <Property Name="LVORM" Type="nvarchar" MaxLength="1" />
+          <Property Name="ERNAM_W" Type="nvarchar" MaxLength="12" />
+          <Property Name="CN_CREATE_DATE" Type="nvarchar" MaxLength="14" />
+          <Property Name="ERNAM_R" Type="nvarchar" MaxLength="12" />
+          <Property Name="CN_CHANGE_DATE" Type="nvarchar" MaxLength="14" />
+        </EntityType>
+        <EntityType Name="ZTIPP0002A">
+          <Key>
+            <PropertyRef Name="WERKS" />
+            <PropertyRef Name="AUFNR" />
+          </Key>
+          <Property Name="WERKS" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="AUFNR" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="AUART" Type="nvarchar" MaxLength="4" />
+          <Property Name="AUART_TXT" Type="nvarchar" MaxLength="40" />
+          <Property Name="PLNBEZ" Type="nvarchar" MaxLength="40" />
+          <Property Name="MAKTX" Type="nvarchar" MaxLength="40" />
+          <Property Name="GAMNG" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="GASMG" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="GMEIN" Type="nvarchar" MaxLength="3" />
+          <Property Name="LGORT" Type="nvarchar" MaxLength="4" />
+          <Property Name="KDAUF" Type="nvarchar" MaxLength="10" />
+          <Property Name="KDPOS" Type="nvarchar" MaxLength="6" />
+          <Property Name="KWMENG" Type="decimal" Precision="15" Scale="3" />
+          <Property Name="EDATU" Type="nvarchar" MaxLength="8" />
+          <Property Name="KUNNR" Type="nvarchar" MaxLength="10" />
+          <Property Name="NAME1" Type="nvarchar" MaxLength="35" />
+          <Property Name="KDMAT" Type="nvarchar" MaxLength="35" />
+          <Property Name="POSTX" Type="nvarchar" MaxLength="100" />
+          <Property Name="BSTNK" Type="nvarchar" MaxLength="20" />
+          <Property Name="ZLABELSIZE" Type="nvarchar" MaxLength="1" />
+          <Property Name="ZMFD" Type="nvarchar" MaxLength="10" />
+          <Property Name="ZMOILD" Type="nvarchar" MaxLength="40" />
+          <Property Name="PRCTR" Type="nvarchar" MaxLength="10" />
+          <Property Name="KTEXT" Type="nvarchar" MaxLength="20" />
+          <Property Name="LVORM" Type="nvarchar" MaxLength="1" />
+          <Property Name="ZTECO" Type="nvarchar" MaxLength="1" />
+          <Property Name="ERNAM_W" Type="nvarchar" MaxLength="12" />
+          <Property Name="CN_CREATE_DATE" Type="nvarchar" MaxLength="14" />
+          <Property Name="ERNAM_R" Type="nvarchar" MaxLength="12" />
+          <Property Name="CN_CHANGE_DATE" Type="nvarchar" MaxLength="14" />
+        </EntityType>
+        <EntityType Name="ZTIPP0002B">
+          <Key>
+            <PropertyRef Name="WERKS" />
+            <PropertyRef Name="AUFNR" />
+            <PropertyRef Name="VORNR" />
+            <PropertyRef Name="UVORN" />
+          </Key>
+          <Property Name="WERKS" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="AUFNR" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="VORNR" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="UVORN" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ARBPL" Type="nvarchar" MaxLength="8" />
+          <Property Name="KTEXT" Type="nvarchar" MaxLength="40" />
+          <Property Name="STEUS" Type="nvarchar" MaxLength="4" />
+          <Property Name="KTSCH" Type="nvarchar" MaxLength="7" />
+          <Property Name="LTXA1" Type="nvarchar" MaxLength="40" />
+          <Property Name="MGVRG" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="ASVRG" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="MEINH" Type="nvarchar" MaxLength="3" />
+          <Property Name="BMSCH" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="VGW01" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="VGE01" Type="nvarchar" MaxLength="3" />
+          <Property Name="VGW02" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="VGE02" Type="nvarchar" MaxLength="3" />
+          <Property Name="VGW03" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="VGE03" Type="nvarchar" MaxLength="3" />
+          <Property Name="VGW04" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="VGE04" Type="nvarchar" MaxLength="3" />
+          <Property Name="VGW05" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="VGE05" Type="nvarchar" MaxLength="3" />
+          <Property Name="VGW06" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="VGE06" Type="nvarchar" MaxLength="3" />
+          <Property Name="LOEKZ" Type="nvarchar" MaxLength="1" />
+          <Property Name="ERNAM_W" Type="nvarchar" MaxLength="12" />
+          <Property Name="CN_CREATE_DATE" Type="nvarchar" MaxLength="14" />
+          <Property Name="ERNAM_R" Type="nvarchar" MaxLength="12" />
+          <Property Name="CN_CHANGE_DATE" Type="nvarchar" MaxLength="14" />
+        </EntityType>
+        <EntityType Name="ZTIPP0003A">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="WERKS" />
+            <PropertyRef Name="AUFNR" />
+            <PropertyRef Name="VORNR" />
+            <PropertyRef Name="ARBPL" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WERKS" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="AUFNR" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="VORNR" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ARBPL" Type="nvarchar" MaxLength="8" Nullable="false" />
+          <Property Name="BUDAT" Type="nvarchar" MaxLength="8" Nullable="false" />
+          <Property Name="ZMACHINE" Type="nvarchar" MaxLength="20" />
+          <Property Name="ZTYPE" Type="nvarchar" MaxLength="1" />
+          <Property Name="LMNGA" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="XMNGA" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="ZUNIT1" Type="nvarchar" MaxLength="3" />
+          <Property Name="ZWORKHOUR" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="ZEXWORKHOUR" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="ZUNIT2" Type="nvarchar" MaxLength="3" />
+          <Property Name="ZEMPNUMBER" Type="decimal" Precision="3" Scale="1" />
+          <Property Name="ZCOUNT" Type="decimal" Precision="3" Scale="1" />
+          <Property Name="RUECK" Type="nvarchar" MaxLength="10" />
+          <Property Name="RMZHL" Type="nvarchar" MaxLength="8" />
+          <Property Name="ZBDCDT" Type="nvarchar" MaxLength="14" />
+          <Property Name="ZSTATUS" Type="nvarchar" MaxLength="1" />
+          <Property Name="ZLOG" Type="nvarchar" MaxLength="250" />
+          <Property Name="CN_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="ERNAM_W" Type="nvarchar" MaxLength="12" />
+          <Property Name="CN_CREATE_DATE" Type="nvarchar" MaxLength="14" />
+          <Property Name="ERNAM_R" Type="nvarchar" MaxLength="12" />
+          <Property Name="CN_CHANGE_DATE" Type="nvarchar" MaxLength="14" />
+        </EntityType>
+        <EntityType Name="ZTIPP0004A">
+          <Key>
+            <PropertyRef Name="APPLY_NO" />
+            <PropertyRef Name="AUFNR" />
+          </Key>
+          <Property Name="APPLY_NO" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="AUFNR" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="WERKS" Type="nvarchar" MaxLength="4" />
+          <Property Name="KTSCH" Type="nvarchar" MaxLength="7" />
+          <Property Name="LTXA1" Type="nvarchar" MaxLength="40" />
+          <Property Name="MATNR" Type="nvarchar" MaxLength="40" />
+          <Property Name="CHARG" Type="nvarchar" MaxLength="10" />
+          <Property Name="MENGE" Type="decimal" Precision="13" Scale="3" />
+          <Property Name="MEINS" Type="nvarchar" MaxLength="3" />
+          <Property Name="LGORT" Type="nvarchar" MaxLength="4" />
+          <Property Name="BUDAT" Type="nvarchar" MaxLength="8" />
+          <Property Name="ZSTATUS" Type="nvarchar" MaxLength="1" />
+          <Property Name="ZLOG" Type="nvarchar" MaxLength="250" />
+          <Property Name="MJAHR" Type="nvarchar" MaxLength="4" />
+          <Property Name="MBLNR" Type="nvarchar" MaxLength="10" />
+          <Property Name="CN_FLAG" Type="nvarchar" MaxLength="1" />
+          <Property Name="ERNAM_W" Type="nvarchar" MaxLength="12" />
+          <Property Name="CN_CREATE_DATE" Type="nvarchar" MaxLength="14" />
+          <Property Name="ERNAM_R" Type="nvarchar" MaxLength="12" />
+          <Property Name="CN_CHANGE_DATE" Type="nvarchar" MaxLength="14" />
+        </EntityType>
+        <EntityContainer Name="YonyuModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTIPP0001A" EntityType="Self.ZTIPP0001A" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTIPP0002A" EntityType="Self.ZTIPP0002A" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTIPP0002B" EntityType="Self.ZTIPP0002B" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTIPP0003A" EntityType="Self.ZTIPP0003A" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZTIPP0004A" EntityType="Self.ZTIPP0004A" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApparadusConfig" EntityType="Self.ApparadusConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ApparadusConfig].[Werk] AS [Werk], 
+    [ApparadusConfig].[ApparadusID] AS [ApparadusID], 
+    [ApparadusConfig].[ApparadusNo] AS [ApparadusNo], 
+    [ApparadusConfig].[ApparadusName] AS [ApparadusName], 
+    [ApparadusConfig].[ApparadusDescription] AS [ApparadusDescription], 
+    [ApparadusConfig].[ApparadusMfgDate] AS [ApparadusMfgDate], 
+    [ApparadusConfig].[ManufacturerID] AS [ManufacturerID], 
+    [ApparadusConfig].[CreateDate] AS [CreateDate], 
+    [ApparadusConfig].[CreatedBy] AS [CreatedBy], 
+    [ApparadusConfig].[DisableFlag] AS [DisableFlag], 
+    [ApparadusConfig].[LmDate] AS [LmDate], 
+    [ApparadusConfig].[LmBy] AS [LmBy]
+    FROM [dbo].[ApparadusConfig] AS [ApparadusConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BartenderConfig" EntityType="Self.BartenderConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BartenderConfig].[bID] AS [bID], 
+    [BartenderConfig].[Version] AS [Version], 
+    [BartenderConfig].[LabelDescription] AS [LabelDescription], 
+    [BartenderConfig].[LabelTemplatePath] AS [LabelTemplatePath]
+    FROM [dbo].[BartenderConfig] AS [BartenderConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CustomerComplaintRecord" EntityType="Self.CustomerComplaintRecord" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CustomerComplaintRecord].[cID] AS [cID], 
+    [CustomerComplaintRecord].[Date] AS [Date], 
+    [CustomerComplaintRecord].[FactoryID] AS [FactoryID], 
+    [CustomerComplaintRecord].[MaterialName] AS [MaterialName], 
+    [CustomerComplaintRecord].[LmTime] AS [LmTime]
+    FROM [dbo].[CustomerComplaintRecord] AS [CustomerComplaintRecord]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EventCodeConfig" EntityType="Self.EventCodeConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EventCodeConfig].[eID] AS [eID], 
+    [EventCodeConfig].[Version] AS [Version], 
+    [EventCodeConfig].[FactoryID] AS [FactoryID], 
+    [EventCodeConfig].[EventType] AS [EventType], 
+    [EventCodeConfig].[EventDescription] AS [EventDescription], 
+    [EventCodeConfig].[EventCode] AS [EventCode]
+    FROM [dbo].[EventCodeConfig] AS [EventCodeConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FactoryConfig" EntityType="Self.FactoryConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FactoryConfig].[fID] AS [fID], 
+    [FactoryConfig].[Version] AS [Version], 
+    [FactoryConfig].[FactoryID] AS [FactoryID], 
+    [FactoryConfig].[FactoryName] AS [FactoryName], 
+    [FactoryConfig].[PalletCodePrefix] AS [PalletCodePrefix], 
+    [FactoryConfig].[SupportWorkCenter] AS [SupportWorkCenter]
+    FROM [dbo].[FactoryConfig] AS [FactoryConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FloorInventory" EntityType="Self.FloorInventory" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FloorInventory].[fID] AS [fID], 
+    [FloorInventory].[PalletCode] AS [PalletCode], 
+    [FloorInventory].[WorkorderNo] AS [WorkorderNo], 
+    [FloorInventory].[MaterialNo] AS [MaterialNo], 
+    [FloorInventory].[FirstInStock] AS [FirstInStock], 
+    [FloorInventory].[Process] AS [Process], 
+    [FloorInventory].[MachineID] AS [MachineID], 
+    [FloorInventory].[CartonID] AS [CartonID], 
+    [FloorInventory].[PcsCarton] AS [PcsCarton], 
+    [FloorInventory].[FloorStockID] AS [FloorStockID], 
+    [FloorInventory].[Comment] AS [Comment]
+    FROM [dbo].[FloorInventory] AS [FloorInventory]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="GroupSet" EntityType="Self.GroupSet" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [GroupSet].[GroupID] AS [GroupID], 
+    [GroupSet].[GroupNameCn] AS [GroupNameCn], 
+    [GroupSet].[GroupNameEn] AS [GroupNameEn], 
+    [GroupSet].[Reportlet] AS [Reportlet]
+    FROM [dbo].[GroupSet] AS [GroupSet]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MachineConfig" EntityType="Self.MachineConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MachineConfig].[fID] AS [fID], 
+    [MachineConfig].[Version] AS [Version], 
+    [MachineConfig].[FactoryID] AS [FactoryID], 
+    [MachineConfig].[WorkCenter] AS [WorkCenter], 
+    [MachineConfig].[MachineID] AS [MachineID], 
+    [MachineConfig].[MachineName] AS [MachineName]
+    FROM [dbo].[MachineConfig] AS [MachineConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ManufacturerConfig" EntityType="Self.ManufacturerConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ManufacturerConfig].[Werk] AS [Werk], 
+    [ManufacturerConfig].[ManufacturerID] AS [ManufacturerID], 
+    [ManufacturerConfig].[ManufacturerName] AS [ManufacturerName], 
+    [ManufacturerConfig].[DistinguishCode] AS [DistinguishCode], 
+    [ManufacturerConfig].[CreateDate] AS [CreateDate], 
+    [ManufacturerConfig].[CreatedBy] AS [CreatedBy], 
+    [ManufacturerConfig].[LmDate] AS [LmDate], 
+    [ManufacturerConfig].[LmBy] AS [LmBy]
+    FROM [dbo].[ManufacturerConfig] AS [ManufacturerConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MoldConfig" EntityType="Self.MoldConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MoldConfig].[Werk] AS [Werk], 
+    [MoldConfig].[FactoryID] AS [FactoryID], 
+    [MoldConfig].[MoldID] AS [MoldID], 
+    [MoldConfig].[MoldNo] AS [MoldNo], 
+    [MoldConfig].[MoldMfgDate] AS [MoldMfgDate], 
+    [MoldConfig].[ManufacturerID] AS [ManufacturerID], 
+    [MoldConfig].[CreateDate] AS [CreateDate], 
+    [MoldConfig].[CreatedBy] AS [CreatedBy], 
+    [MoldConfig].[DisableFlag] AS [DisableFlag], 
+    [MoldConfig].[LmDate] AS [LmDate], 
+    [MoldConfig].[LmBy] AS [LmBy]
+    FROM [dbo].[MoldConfig] AS [MoldConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MoldIDAssociationConfig" EntityType="Self.MoldIDAssociationConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MoldIDAssociationConfig].[MoldID] AS [MoldID], 
+    [MoldIDAssociationConfig].[ApparadusID] AS [ApparadusID]
+    FROM [dbo].[MoldIDAssociationConfig] AS [MoldIDAssociationConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MoldTransaction" EntityType="Self.MoldTransaction" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MoldTransaction].[TransactionID] AS [TransactionID], 
+    [MoldTransaction].[Werk] AS [Werk], 
+    [MoldTransaction].[MoldID] AS [MoldID], 
+    [MoldTransaction].[ApparadusID] AS [ApparadusID], 
+    [MoldTransaction].[Quantity] AS [Quantity], 
+    [MoldTransaction].[Usage] AS [Usage], 
+    [MoldTransaction].[UsingDescription] AS [UsingDescription], 
+    [MoldTransaction].[Comment] AS [Comment], 
+    [MoldTransaction].[TransactionTypeNo] AS [TransactionTypeNo], 
+    [MoldTransaction].[CreateDate] AS [CreateDate], 
+    [MoldTransaction].[CreatedBy] AS [CreatedBy], 
+    [MoldTransaction].[LmDate] AS [LmDate], 
+    [MoldTransaction].[LmBy] AS [LmBy]
+    FROM [dbo].[MoldTransaction] AS [MoldTransaction]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PalletTag" EntityType="Self.PalletTag" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PalletTag].[pID] AS [pID], 
+    [PalletTag].[FactoryID] AS [FactoryID], 
+    [PalletTag].[FactoryPrefix] AS [FactoryPrefix], 
+    [PalletTag].[PalletCode] AS [PalletCode], 
+    [PalletTag].[UserID] AS [UserID], 
+    [PalletTag].[Status] AS [Status], 
+    [PalletTag].[StockID] AS [StockID], 
+    [PalletTag].[LmTime] AS [LmTime]
+    FROM [dbo].[PalletTag] AS [PalletTag]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="PostDateConfig" EntityType="Self.PostDateConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PostDateConfig].[pID] AS [pID], 
+    [PostDateConfig].[Year] AS [Year], 
+    [PostDateConfig].[Version] AS [Version], 
+    [PostDateConfig].[RequestDate] AS [RequestDate], 
+    [PostDateConfig].[PostDate] AS [PostDate]
+    FROM [dbo].[PostDateConfig] AS [PostDateConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Production" EntityType="Self.Production" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Production].[pID] AS [pID], 
+    [Production].[FactoryArea] AS [FactoryArea], 
+    [Production].[FactoryID] AS [FactoryID], 
+    [Production].[Date] AS [Date], 
+    [Production].[WorkorderNo] AS [WorkorderNo], 
+    [Production].[MaterialNo] AS [MaterialNo], 
+    [Production].[MaterialName] AS [MaterialName], 
+    [Production].[Process] AS [Process], 
+    [Production].[ProcessDescription] AS [ProcessDescription], 
+    [Production].[MachineID] AS [MachineID], 
+    [Production].[Unit] AS [Unit], 
+    [Production].[OrderQty] AS [OrderQty], 
+    [Production].[CartonID] AS [CartonID], 
+    [Production].[PcsCarton] AS [PcsCarton], 
+    [Production].[ProductionQty] AS [ProductionQty], 
+    [Production].[ScrapQty] AS [ScrapQty], 
+    [Production].[PalletCode] AS [PalletCode], 
+    [Production].[Status] AS [Status], 
+    [Production].[CreateTime] AS [CreateTime], 
+    [Production].[Shift] AS [Shift], 
+    [Production].[QualityTime] AS [QualityTime], 
+    [Production].[QualityShift] AS [QualityShift], 
+    [Production].[UpdateTime] AS [UpdateTime], 
+    [Production].[StockInOrderNo] AS [StockInOrderNo], 
+    [Production].[PublishDate] AS [PublishDate], 
+    [Production].[ProductionType] AS [ProductionType], 
+    [Production].[Weight] AS [Weight], 
+    [Production].[Cavity] AS [Cavity], 
+    [Production].[Period] AS [Period], 
+    [Production].[ScrapDescription] AS [ScrapDescription], 
+    [Production].[wID] AS [wID], 
+    [Production].[Editor] AS [Editor], 
+    [Production].[LmTime] AS [LmTime]
+    FROM [dbo].[Production] AS [Production]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ProductionLog" EntityType="Self.ProductionLog" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ProductionLog].[pID] AS [pID], 
+    [ProductionLog].[FactoryArea] AS [FactoryArea], 
+    [ProductionLog].[FactoryID] AS [FactoryID], 
+    [ProductionLog].[Date] AS [Date], 
+    [ProductionLog].[WorkorderNo] AS [WorkorderNo], 
+    [ProductionLog].[MaterialNo] AS [MaterialNo], 
+    [ProductionLog].[MaterialName] AS [MaterialName], 
+    [ProductionLog].[Process] AS [Process], 
+    [ProductionLog].[ProcessDescription] AS [ProcessDescription], 
+    [ProductionLog].[MachineID] AS [MachineID], 
+    [ProductionLog].[Unit] AS [Unit], 
+    [ProductionLog].[CartonID] AS [CartonID], 
+    [ProductionLog].[PcsCarton] AS [PcsCarton], 
+    [ProductionLog].[ProductionQty] AS [ProductionQty], 
+    [ProductionLog].[ScrapQty] AS [ScrapQty], 
+    [ProductionLog].[PalletCode] AS [PalletCode], 
+    [ProductionLog].[Status] AS [Status], 
+    [ProductionLog].[CreateTime] AS [CreateTime], 
+    [ProductionLog].[Shift] AS [Shift], 
+    [ProductionLog].[QualityTime] AS [QualityTime], 
+    [ProductionLog].[QualityShift] AS [QualityShift], 
+    [ProductionLog].[UpdateTime] AS [UpdateTime], 
+    [ProductionLog].[StockInOrderNo] AS [StockInOrderNo], 
+    [ProductionLog].[PublishDate] AS [PublishDate], 
+    [ProductionLog].[ProductionType] AS [ProductionType], 
+    [ProductionLog].[Weight] AS [Weight], 
+    [ProductionLog].[Cavity] AS [Cavity], 
+    [ProductionLog].[Period] AS [Period], 
+    [ProductionLog].[ScrapDescription] AS [ScrapDescription], 
+    [ProductionLog].[wID] AS [wID], 
+    [ProductionLog].[Editor] AS [Editor], 
+    [ProductionLog].[LmTime] AS [LmTime]
+    FROM [dbo].[ProductionLog] AS [ProductionLog]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ProjectCodeConfig" EntityType="Self.ProjectCodeConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ProjectCodeConfig].[pID] AS [pID], 
+    [ProjectCodeConfig].[Version] AS [Version], 
+    [ProjectCodeConfig].[ProjectCode] AS [ProjectCode], 
+    [ProjectCodeConfig].[ProjectDescription] AS [ProjectDescription], 
+    [ProjectCodeConfig].[LmTime] AS [LmTime]
+    FROM [dbo].[ProjectCodeConfig] AS [ProjectCodeConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="QualityInvalidRecord" EntityType="Self.QualityInvalidRecord" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [QualityInvalidRecord].[qID] AS [qID], 
+    [QualityInvalidRecord].[Date] AS [Date], 
+    [QualityInvalidRecord].[Shift] AS [Shift], 
+    [QualityInvalidRecord].[FactoryID] AS [FactoryID], 
+    [QualityInvalidRecord].[MachineID] AS [MachineID], 
+    [QualityInvalidRecord].[WorkorderNo] AS [WorkorderNo], 
+    [QualityInvalidRecord].[Process] AS [Process], 
+    [QualityInvalidRecord].[MaterialName] AS [MaterialName], 
+    [QualityInvalidRecord].[FirstItemQuality] AS [FirstItemQuality], 
+    [QualityInvalidRecord].[Status] AS [Status], 
+    [QualityInvalidRecord].[Hour] AS [Hour], 
+    [QualityInvalidRecord].[Minute] AS [Minute], 
+    [QualityInvalidRecord].[KeepQty] AS [KeepQty], 
+    [QualityInvalidRecord].[KeepStartCartonID] AS [KeepStartCartonID], 
+    [QualityInvalidRecord].[KeepEndCartonID] AS [KeepEndCartonID], 
+    [QualityInvalidRecord].[Result] AS [Result], 
+    [QualityInvalidRecord].[WorkingTime] AS [WorkingTime], 
+    [QualityInvalidRecord].[ScrapQty] AS [ScrapQty], 
+    [QualityInvalidRecord].[Mold] AS [Mold], 
+    [QualityInvalidRecord].[LmTime] AS [LmTime]
+    FROM [dbo].[QualityInvalidRecord] AS [QualityInvalidRecord]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ReworkScrapRecord" EntityType="Self.ReworkScrapRecord" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ReworkScrapRecord].[rID] AS [rID], 
+    [ReworkScrapRecord].[WorkorderNo] AS [WorkorderNo], 
+    [ReworkScrapRecord].[Process] AS [Process], 
+    [ReworkScrapRecord].[ProcessDescription] AS [ProcessDescription], 
+    [ReworkScrapRecord].[MachineID] AS [MachineID], 
+    [ReworkScrapRecord].[ReworkScrapQty] AS [ReworkScrapQty], 
+    [ReworkScrapRecord].[Shift] AS [Shift], 
+    [ReworkScrapRecord].[Date] AS [Date], 
+    [ReworkScrapRecord].[CreateTime] AS [CreateTime], 
+    [ReworkScrapRecord].[PublishDate] AS [PublishDate], 
+    [ReworkScrapRecord].[LmTime] AS [LmTime]
+    FROM [dbo].[ReworkScrapRecord] AS [ReworkScrapRecord]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ScrapRecord" EntityType="Self.ScrapRecord" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ScrapRecord].[sID] AS [sID], 
+    [ScrapRecord].[WorkorderNo] AS [WorkorderNo], 
+    [ScrapRecord].[Process] AS [Process], 
+    [ScrapRecord].[ProcessDescription] AS [ProcessDescription], 
+    [ScrapRecord].[MachineID] AS [MachineID], 
+    [ScrapRecord].[ScrapQty] AS [ScrapQty], 
+    [ScrapRecord].[Shift] AS [Shift], 
+    [ScrapRecord].[Date] AS [Date], 
+    [ScrapRecord].[CreateTime] AS [CreateTime], 
+    [ScrapRecord].[PublishDate] AS [PublishDate], 
+    [ScrapRecord].[LmTime] AS [LmTime]
+    FROM [dbo].[ScrapRecord] AS [ScrapRecord]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="StockConfig" EntityType="Self.StockConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [StockConfig].[sID] AS [sID], 
+    [StockConfig].[Version] AS [Version], 
+    [StockConfig].[AreaID] AS [AreaID], 
+    [StockConfig].[AreaName] AS [AreaName], 
+    [StockConfig].[StockID] AS [StockID], 
+    [StockConfig].[StockName] AS [StockName]
+    FROM [dbo].[StockConfig] AS [StockConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="StockInOrder" EntityType="Self.StockInOrder" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [StockInOrder].[soID] AS [soID], 
+    [StockInOrder].[StockInOrderNo] AS [StockInOrderNo], 
+    [StockInOrder].[RequestDate] AS [RequestDate], 
+    [StockInOrder].[ReceiveDate] AS [ReceiveDate], 
+    [StockInOrder].[StockID] AS [StockID], 
+    [StockInOrder].[PalletCodes] AS [PalletCodes], 
+    [StockInOrder].[UserID] AS [UserID], 
+    [StockInOrder].[LmTime] AS [LmTime]
+    FROM [dbo].[StockInOrder] AS [StockInOrder]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TransactionConfig" EntityType="Self.TransactionConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [TransactionConfig].[Werk] AS [Werk], 
+    [TransactionConfig].[FactoryID] AS [FactoryID], 
+    [TransactionConfig].[TransactionTypeNo] AS [TransactionTypeNo], 
+    [TransactionConfig].[TransactionTypeName] AS [TransactionTypeName], 
+    [TransactionConfig].[Plus-Minus Code] AS [Plus-Minus Code], 
+    [TransactionConfig].[CreateDate] AS [CreateDate], 
+    [TransactionConfig].[CreatedBy] AS [CreatedBy], 
+    [TransactionConfig].[LmDate] AS [LmDate], 
+    [TransactionConfig].[LmBy] AS [LmBy]
+    FROM [dbo].[TransactionConfig] AS [TransactionConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UserData" EntityType="Self.UserData" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [UserData].[UserID] AS [UserID], 
+    [UserData].[UserName] AS [UserName], 
+    [UserData].[Password] AS [Password], 
+    [UserData].[NameCn] AS [NameCn], 
+    [UserData].[NameEn] AS [NameEn], 
+    [UserData].[Email] AS [Email], 
+    [UserData].[GroupID] AS [GroupID]
+    FROM [dbo].[UserData] AS [UserData]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WorkerConfig" EntityType="Self.WorkerConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WorkerConfig].[Version] AS [Version], 
+    [WorkerConfig].[WorkerId] AS [WorkerId], 
+    [WorkerConfig].[Department] AS [Department], 
+    [WorkerConfig].[WorkerNo] AS [WorkerNo], 
+    [WorkerConfig].[WorkerName] AS [WorkerName]
+    FROM [dbo].[WorkerConfig] AS [WorkerConfig]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WorkingHours" EntityType="Self.WorkingHours" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WorkingHours].[wID] AS [wID], 
+    [WorkingHours].[FactoryID] AS [FactoryID], 
+    [WorkingHours].[Date] AS [Date], 
+    [WorkingHours].[Shift] AS [Shift], 
+    [WorkingHours].[WorkorderNo] AS [WorkorderNo], 
+    [WorkingHours].[MaterialName] AS [MaterialName], 
+    [WorkingHours].[MachineID] AS [MachineID], 
+    [WorkingHours].[Process] AS [Process], 
+    [WorkingHours].[ProcessDescription] AS [ProcessDescription], 
+    [WorkingHours].[EventType] AS [EventType], 
+    [WorkingHours].[EventCode] AS [EventCode], 
+    [WorkingHours].[EventDateTime] AS [EventDateTime], 
+    [WorkingHours].[WorkingTime] AS [WorkingTime], 
+    [WorkingHours].[AbnormalTime] AS [AbnormalTime], 
+    [WorkingHours].[Workers] AS [Workers], 
+    [WorkingHours].[OperationType] AS [OperationType], 
+    [WorkingHours].[ProjectCode] AS [ProjectCode], 
+    [WorkingHours].[ProductionType] AS [ProductionType], 
+    [WorkingHours].[Mold] AS [Mold], 
+    [WorkingHours].[Test] AS [Test], 
+    [WorkingHours].[Malfunction] AS [Malfunction], 
+    [WorkingHours].[Adjustment] AS [Adjustment], 
+    [WorkingHours].[MaterialAbnormal] AS [MaterialAbnormal], 
+    [WorkingHours].[MoldAbnormal] AS [MoldAbnormal], 
+    [WorkingHours].[Other] AS [Other], 
+    [WorkingHours].[InvalidTime] AS [InvalidTime], 
+    [WorkingHours].[InvalidDescription] AS [InvalidDescription], 
+    [WorkingHours].[MoldNo] AS [MoldNo], 
+    [WorkingHours].[MoldName] AS [MoldName], 
+    [WorkingHours].[DepartmentNo] AS [DepartmentNo], 
+    [WorkingHours].[MoldStatus] AS [MoldStatus], 
+    [WorkingHours].[ProjectDescription] AS [ProjectDescription], 
+    [WorkingHours].[Comment] AS [Comment], 
+    [WorkingHours].[ProductionQty] AS [ProductionQty], 
+    [WorkingHours].[QualifiedQty] AS [QualifiedQty], 
+    [WorkingHours].[ScrapQty] AS [ScrapQty], 
+    [WorkingHours].[Unit] AS [Unit], 
+    [WorkingHours].[Editor] AS [Editor], 
+    [WorkingHours].[PublishDate] AS [PublishDate], 
+    [WorkingHours].[LmTime] AS [LmTime]
+    FROM [dbo].[WorkingHours] AS [WorkingHours]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WorkingHoursDescription" EntityType="Self.WorkingHoursDescription" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [WorkingHoursDescription].[wID] AS [wID], 
+    [WorkingHoursDescription].[Date] AS [Date], 
+    [WorkingHoursDescription].[Shift] AS [Shift], 
+    [WorkingHoursDescription].[FactoryID] AS [FactoryID], 
+    [WorkingHoursDescription].[MachineID] AS [MachineID], 
+    [WorkingHoursDescription].[WorkorderNo] AS [WorkorderNo], 
+    [WorkingHoursDescription].[Process] AS [Process], 
+    [WorkingHoursDescription].[EventDateTime] AS [EventDateTime], 
+    [WorkingHoursDescription].[MtTypeItems] AS [MtTypeItems], 
+    [WorkingHoursDescription].[EventDescription] AS [EventDescription], 
+    [WorkingHoursDescription].[DtTypeItems] AS [DtTypeItems], 
+    [WorkingHoursDescription].[InvalidDescription] AS [InvalidDescription], 
+    [WorkingHoursDescription].[Improve] AS [Improve], 
+    [WorkingHoursDescription].[Comment] AS [Comment], 
+    [WorkingHoursDescription].[LmTime] AS [LmTime]
+    FROM [dbo].[WorkingHoursDescription] AS [WorkingHoursDescription]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="YearShiftConfig" EntityType="Self.YearShiftConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [YearShiftConfig].[yID] AS [yID], 
+    [YearShiftConfig].[Version] AS [Version], 
+    [YearShiftConfig].[Year] AS [Year], 
+    [YearShiftConfig].[FactoryID] AS [FactoryID], 
+    [YearShiftConfig].[ShiftID] AS [ShiftID], 
+    [YearShiftConfig].[ShiftIndex] AS [ShiftIndex], 
+    [YearShiftConfig].[DayNight] AS [DayNight], 
+    [YearShiftConfig].[ShiftStart] AS [ShiftStart], 
+    [YearShiftConfig].[ShiftEnd] AS [ShiftEnd]
+    FROM [dbo].[YearShiftConfig] AS [YearShiftConfig]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="YonyuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ZTIPP0001A">
+          <Key>
+            <PropertyRef Name="MATNR" />
+            <PropertyRef Name="WERKS" />
+          </Key>
+          <Property Name="MATNR" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MAKTX" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="MEINS" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="LGPRO" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="NTGEW" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="BRGEW" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="GEWEI" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ZCARTONQTY" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="ZLABELSIZE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ZINNERTEXT" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ZSPEC" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ZTEMPERATURE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ZORIGIN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ZMATERIAL2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ZMATERIAL" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ZCOLOUR" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ZDESC" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ZMULTIPLE" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="ZCBM" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ZUPC_CODE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ZCGC_PART_NUMBER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="KUNNR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NAME1" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="KDMAT" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="POSTX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ZFR1" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="ZCAVITY" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="RBTXT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LVORM" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ERNAM_W" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CN_CREATE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="ERNAM_R" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CN_CHANGE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ZTIPP0002A">
+          <Key>
+            <PropertyRef Name="WERKS" />
+            <PropertyRef Name="AUFNR" />
+          </Key>
+          <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AUART" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="AUART_TXT" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="PLNBEZ" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="MAKTX" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="GAMNG" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="GASMG" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="GMEIN" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="LGORT" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="KDAUF" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="KDPOS" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="KWMENG" Type="Decimal" Precision="15" Scale="3" />
+          <Property Name="EDATU" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="KUNNR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="NAME1" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="KDMAT" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="POSTX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BSTNK" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZLABELSIZE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ZMFD" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ZMOILD" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="PRCTR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="KTEXT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LVORM" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ZTECO" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ERNAM_W" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CN_CREATE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="ERNAM_R" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CN_CHANGE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ZTIPP0002B">
+          <Key>
+            <PropertyRef Name="WERKS" />
+            <PropertyRef Name="AUFNR" />
+            <PropertyRef Name="VORNR" />
+            <PropertyRef Name="UVORN" />
+          </Key>
+          <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VORNR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UVORN" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ARBPL" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="KTEXT" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="STEUS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="KTSCH" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="LTXA1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="MGVRG" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="ASVRG" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="MEINH" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="BMSCH" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="VGW01" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="VGE01" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="VGW02" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="VGE02" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="VGW03" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="VGE03" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="VGW04" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="VGE04" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="VGW05" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="VGE05" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="VGW06" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="VGE06" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="LOEKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ERNAM_W" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CN_CREATE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="ERNAM_R" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CN_CHANGE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ZTIPP0003A">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="WERKS" />
+            <PropertyRef Name="AUFNR" />
+            <PropertyRef Name="VORNR" />
+            <PropertyRef Name="ARBPL" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VORNR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ARBPL" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BUDAT" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ZMACHINE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZTYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="LMNGA" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="XMNGA" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="ZUNIT1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ZWORKHOUR" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="ZEXWORKHOUR" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="ZUNIT2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ZEMPNUMBER" Type="Decimal" Precision="3" Scale="1" />
+          <Property Name="ZCOUNT" Type="Decimal" Precision="3" Scale="1" />
+          <Property Name="RUECK" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="RMZHL" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="ZBDCDT" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="ZSTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ZLOG" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CN_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ERNAM_W" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CN_CREATE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="ERNAM_R" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CN_CHANGE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ZTIPP0004A">
+          <Key>
+            <PropertyRef Name="APPLY_NO" />
+            <PropertyRef Name="AUFNR" />
+          </Key>
+          <Property Name="APPLY_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="KTSCH" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="LTXA1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="MATNR" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="CHARG" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MENGE" Type="Decimal" Precision="13" Scale="3" />
+          <Property Name="MEINS" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="LGORT" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="BUDAT" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="ZSTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ZLOG" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MJAHR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="MBLNR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CN_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ERNAM_W" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CN_CREATE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="ERNAM_R" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CN_CHANGE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ApparadusConfig">
+          <Key>
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="ApparadusID" />
+            <PropertyRef Name="ApparadusNo" />
+            <PropertyRef Name="ApparadusName" />
+            <PropertyRef Name="ApparadusDescription" />
+            <PropertyRef Name="ApparadusMfgDate" />
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="DisableFlag" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ApparadusID" Type="Int64" Nullable="false" />
+          <Property Name="ApparadusNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ApparadusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ApparadusDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ApparadusMfgDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DisableFlag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BartenderConfig">
+          <Key>
+            <PropertyRef Name="bID" />
+          </Key>
+          <Property Name="bID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Version" Type="DateTime" Precision="3" />
+          <Property Name="LabelDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LabelTemplatePath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CustomerComplaintRecord">
+          <Key>
+            <PropertyRef Name="cID" />
+          </Key>
+          <Property Name="cID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="FactoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MaterialName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="EventCodeConfig">
+          <Key>
+            <PropertyRef Name="eID" />
+          </Key>
+          <Property Name="eID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Version" Type="DateTime" Precision="3" />
+          <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EventType" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="EventDescription" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="EventCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FactoryConfig">
+          <Key>
+            <PropertyRef Name="fID" />
+          </Key>
+          <Property Name="fID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Version" Type="DateTime" Precision="3" />
+          <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FactoryName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="PalletCodePrefix" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SupportWorkCenter" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FloorInventory">
+          <Key>
+            <PropertyRef Name="fID" />
+          </Key>
+          <Property Name="fID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PalletCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkorderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaterialNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="FirstInStock" Type="DateTime" Precision="3" />
+          <Property Name="Process" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MachineID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CartonID" Type="Int32" />
+          <Property Name="PcsCarton" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="FloorStockID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GroupSet">
+          <Key>
+            <PropertyRef Name="GroupID" />
+            <PropertyRef Name="GroupNameCn" />
+            <PropertyRef Name="GroupNameEn" />
+          </Key>
+          <Property Name="GroupID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupNameCn" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GroupNameEn" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Reportlet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MachineConfig">
+          <Key>
+            <PropertyRef Name="fID" />
+          </Key>
+          <Property Name="fID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Version" Type="DateTime" Precision="3" />
+          <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WorkCenter" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MachineID" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="MachineName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ManufacturerConfig">
+          <Key>
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="ManufacturerName" />
+            <PropertyRef Name="DistinguishCode" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+          <Property Name="ManufacturerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DistinguishCode" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MoldConfig">
+          <Key>
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="FactoryID" />
+            <PropertyRef Name="MoldID" />
+            <PropertyRef Name="MoldNo" />
+            <PropertyRef Name="MoldMfgDate" />
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="DisableFlag" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MoldID" Type="Int64" Nullable="false" />
+          <Property Name="MoldNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MoldMfgDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DisableFlag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MoldIDAssociationConfig">
+          <Key>
+            <PropertyRef Name="MoldID" />
+            <PropertyRef Name="ApparadusID" />
+          </Key>
+          <Property Name="MoldID" Type="Int64" Nullable="false" />
+          <Property Name="ApparadusID" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MoldTransaction">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="MoldID" />
+            <PropertyRef Name="ApparadusID" />
+            <PropertyRef Name="Quantity" />
+            <PropertyRef Name="Usage" />
+            <PropertyRef Name="TransactionTypeNo" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="TransactionID" Type="Int64" Nullable="false" />
+          <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MoldID" Type="Int64" Nullable="false" />
+          <Property Name="ApparadusID" Type="Int64" Nullable="false" />
+          <Property Name="Quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Usage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UsingDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionTypeNo" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PalletTag">
+          <Key>
+            <PropertyRef Name="pID" />
+          </Key>
+          <Property Name="pID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FactoryPrefix" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PalletCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="StockID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PostDateConfig">
+          <Key>
+            <PropertyRef Name="pID" />
+          </Key>
+          <Property Name="pID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Version" Type="DateTime" Precision="3" />
+          <Property Name="RequestDate" Type="DateTime" Precision="3" />
+          <Property Name="PostDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Production">
+          <Key>
+            <PropertyRef Name="pID" />
+          </Key>
+          <Property Name="pID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryArea" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="WorkorderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaterialNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaterialName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Process" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MachineID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrderQty" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="CartonID" Type="Int32" />
+          <Property Name="PcsCarton" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="ProductionQty" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapQty" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="PalletCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Shift" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="QualityTime" Type="DateTime" Precision="3" />
+          <Property Name="QualityShift" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="StockInOrderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PublishDate" Type="DateTime" Precision="3" />
+          <Property Name="ProductionType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Cavity" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Period" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="wID" Type="Int64" />
+          <Property Name="Editor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ProductionLog">
+          <Key>
+            <PropertyRef Name="pID" />
+          </Key>
+          <Property Name="pID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryArea" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="WorkorderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaterialNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaterialName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Process" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MachineID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CartonID" Type="Int32" />
+          <Property Name="PcsCarton" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="ProductionQty" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapQty" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="PalletCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Shift" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="QualityTime" Type="DateTime" Precision="3" />
+          <Property Name="QualityShift" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="StockInOrderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PublishDate" Type="DateTime" Precision="3" />
+          <Property Name="ProductionType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Cavity" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Period" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="wID" Type="Int64" />
+          <Property Name="Editor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ProjectCodeConfig">
+          <Key>
+            <PropertyRef Name="pID" />
+          </Key>
+          <Property Name="pID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Version" Type="DateTime" Precision="3" />
+          <Property Name="ProjectCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="QualityInvalidRecord">
+          <Key>
+            <PropertyRef Name="qID" />
+          </Key>
+          <Property Name="qID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Shift" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="FactoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MachineID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="WorkorderNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Process" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MaterialName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="FirstItemQuality" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Hour" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Minute" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="KeepQty" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="KeepStartCartonID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="KeepEndCartonID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Result" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="WorkingTime" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ScrapQty" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Mold" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ReworkScrapRecord">
+          <Key>
+            <PropertyRef Name="rID" />
+          </Key>
+          <Property Name="rID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkorderNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Process" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MachineID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ReworkScrapQty" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Shift" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="PublishDate" Type="DateTime" Precision="3" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ScrapRecord">
+          <Key>
+            <PropertyRef Name="sID" />
+          </Key>
+          <Property Name="sID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkorderNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Process" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MachineID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ScrapQty" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Shift" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="PublishDate" Type="DateTime" Precision="3" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="StockConfig">
+          <Key>
+            <PropertyRef Name="sID" />
+          </Key>
+          <Property Name="sID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Version" Type="DateTime" Precision="7" />
+          <Property Name="AreaID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="AreaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StockID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="StockName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StockInOrder">
+          <Key>
+            <PropertyRef Name="soID" />
+          </Key>
+          <Property Name="soID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StockInOrderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RequestDate" Type="DateTime" Precision="3" />
+          <Property Name="ReceiveDate" Type="DateTime" Precision="3" />
+          <Property Name="StockID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PalletCodes" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TransactionConfig">
+          <Key>
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="FactoryID" />
+            <PropertyRef Name="TransactionTypeNo" />
+            <PropertyRef Name="TransactionTypeName" />
+            <PropertyRef Name="Plus_Minus_Code" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TransactionTypeNo" Type="Int32" Nullable="false" />
+          <Property Name="TransactionTypeName" Type="Int32" Nullable="false" />
+          <Property Name="Plus_Minus_Code" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserData">
+          <Key>
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NameCn" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NameEn" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="GroupID" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="WorkerConfig">
+          <Key>
+            <PropertyRef Name="WorkerId" />
+          </Key>
+          <Property Name="Version" Type="DateTime" Precision="3" />
+          <Property Name="WorkerId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Department" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WorkerNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WorkerName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="WorkingHours">
+          <Key>
+            <PropertyRef Name="wID" />
+          </Key>
+          <Property Name="wID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Shift" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="WorkorderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaterialName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MachineID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Process" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EventType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EventCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EventDateTime" Type="DateTime" Precision="3" />
+          <Property Name="WorkingTime" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="AbnormalTime" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Workers" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OperationType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Mold" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Test" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Malfunction" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Adjustment" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="MaterialAbnormal" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="MoldAbnormal" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Other" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="InvalidTime" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="InvalidDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MoldNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MoldName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MoldStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionQty" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="QualifiedQty" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="ScrapQty" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Editor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PublishDate" Type="DateTime" Precision="3" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="WorkingHoursDescription">
+          <Key>
+            <PropertyRef Name="wID" />
+          </Key>
+          <Property Name="wID" Type="Int64" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Shift" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FactoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MachineID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="WorkorderNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Process" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="EventDateTime" Type="DateTime" Precision="3" />
+          <Property Name="MtTypeItems" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="EventDescription" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="DtTypeItems" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="InvalidDescription" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="Improve" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="LmTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="YearShiftConfig">
+          <Key>
+            <PropertyRef Name="yID" />
+          </Key>
+          <Property Name="yID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Version" Type="DateTime" Precision="3" />
+          <Property Name="Year" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FactoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ShiftID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ShiftIndex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DayNight" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ShiftStart" Type="DateTime" Precision="3" />
+          <Property Name="ShiftEnd" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="YonYuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="ZTIPP0001A" EntityType="Self.ZTIPP0001A" />
+          <EntitySet Name="ZTIPP0002A" EntityType="Self.ZTIPP0002A" />
+          <EntitySet Name="ZTIPP0002B" EntityType="Self.ZTIPP0002B" />
+          <EntitySet Name="ZTIPP0003A" EntityType="Self.ZTIPP0003A" />
+          <EntitySet Name="ZTIPP0004A" EntityType="Self.ZTIPP0004A" />
+          <EntitySet Name="ApparadusConfig" EntityType="Self.ApparadusConfig" />
+          <EntitySet Name="BartenderConfig" EntityType="Self.BartenderConfig" />
+          <EntitySet Name="CustomerComplaintRecord" EntityType="Self.CustomerComplaintRecord" />
+          <EntitySet Name="EventCodeConfig" EntityType="Self.EventCodeConfig" />
+          <EntitySet Name="FactoryConfig" EntityType="Self.FactoryConfig" />
+          <EntitySet Name="FloorInventory" EntityType="Self.FloorInventory" />
+          <EntitySet Name="GroupSet" EntityType="Self.GroupSet" />
+          <EntitySet Name="MachineConfig" EntityType="Self.MachineConfig" />
+          <EntitySet Name="ManufacturerConfig" EntityType="Self.ManufacturerConfig" />
+          <EntitySet Name="MoldConfig" EntityType="Self.MoldConfig" />
+          <EntitySet Name="MoldIDAssociationConfig" EntityType="Self.MoldIDAssociationConfig" />
+          <EntitySet Name="MoldTransaction" EntityType="Self.MoldTransaction" />
+          <EntitySet Name="PalletTag" EntityType="Self.PalletTag" />
+          <EntitySet Name="PostDateConfig" EntityType="Self.PostDateConfig" />
+          <EntitySet Name="Production" EntityType="Self.Production" />
+          <EntitySet Name="ProductionLog" EntityType="Self.ProductionLog" />
+          <EntitySet Name="ProjectCodeConfig" EntityType="Self.ProjectCodeConfig" />
+          <EntitySet Name="QualityInvalidRecord" EntityType="Self.QualityInvalidRecord" />
+          <EntitySet Name="ReworkScrapRecord" EntityType="Self.ReworkScrapRecord" />
+          <EntitySet Name="ScrapRecord" EntityType="Self.ScrapRecord" />
+          <EntitySet Name="StockConfig" EntityType="Self.StockConfig" />
+          <EntitySet Name="StockInOrder" EntityType="Self.StockInOrder" />
+          <EntitySet Name="TransactionConfig" EntityType="Self.TransactionConfig" />
+          <EntitySet Name="UserData" EntityType="Self.UserData" />
+          <EntitySet Name="WorkerConfig" EntityType="Self.WorkerConfig" />
+          <EntitySet Name="WorkingHours" EntityType="Self.WorkingHours" />
+          <EntitySet Name="WorkingHoursDescription" EntityType="Self.WorkingHoursDescription" />
+          <EntitySet Name="YearShiftConfig" EntityType="Self.YearShiftConfig" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="YonyuModelStoreContainer" CdmEntityContainer="YonYuEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="YonyuModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTIPP0001A">
+            <EntityTypeMapping TypeName="YonyuModel.ZTIPP0001A">
+              <MappingFragment StoreEntitySet="ZTIPP0001A">
+                <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+                <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+                <ScalarProperty Name="MAKTX" ColumnName="MAKTX" />
+                <ScalarProperty Name="MEINS" ColumnName="MEINS" />
+                <ScalarProperty Name="LGPRO" ColumnName="LGPRO" />
+                <ScalarProperty Name="NTGEW" ColumnName="NTGEW" />
+                <ScalarProperty Name="BRGEW" ColumnName="BRGEW" />
+                <ScalarProperty Name="GEWEI" ColumnName="GEWEI" />
+                <ScalarProperty Name="ZCARTONQTY" ColumnName="ZCARTONQTY" />
+                <ScalarProperty Name="ZLABELSIZE" ColumnName="ZLABELSIZE" />
+                <ScalarProperty Name="ZINNERTEXT" ColumnName="ZINNERTEXT" />
+                <ScalarProperty Name="ZSPEC" ColumnName="ZSPEC" />
+                <ScalarProperty Name="ZTEMPERATURE" ColumnName="ZTEMPERATURE" />
+                <ScalarProperty Name="ZORIGIN" ColumnName="ZORIGIN" />
+                <ScalarProperty Name="ZMATERIAL2" ColumnName="ZMATERIAL2" />
+                <ScalarProperty Name="ZMATERIAL" ColumnName="ZMATERIAL" />
+                <ScalarProperty Name="ZCOLOUR" ColumnName="ZCOLOUR" />
+                <ScalarProperty Name="ZDESC" ColumnName="ZDESC" />
+                <ScalarProperty Name="ZMULTIPLE" ColumnName="ZMULTIPLE" />
+                <ScalarProperty Name="ZCBM" ColumnName="ZCBM" />
+                <ScalarProperty Name="ZUPC_CODE" ColumnName="ZUPC_CODE" />
+                <ScalarProperty Name="ZCGC_PART_NUMBER" ColumnName="ZCGC_PART_NUMBER" />
+                <ScalarProperty Name="KUNNR" ColumnName="KUNNR" />
+                <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+                <ScalarProperty Name="KDMAT" ColumnName="KDMAT" />
+                <ScalarProperty Name="POSTX" ColumnName="POSTX" />
+                <ScalarProperty Name="ZFR1" ColumnName="ZFR1" />
+                <ScalarProperty Name="ZCAVITY" ColumnName="ZCAVITY" />
+                <ScalarProperty Name="RBTXT" ColumnName="RBTXT" />
+                <ScalarProperty Name="LVORM" ColumnName="LVORM" />
+                <ScalarProperty Name="ERNAM_W" ColumnName="ERNAM_W" />
+                <ScalarProperty Name="CN_CREATE_DATE" ColumnName="CN_CREATE_DATE" />
+                <ScalarProperty Name="ERNAM_R" ColumnName="ERNAM_R" />
+                <ScalarProperty Name="CN_CHANGE_DATE" ColumnName="CN_CHANGE_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTIPP0002A">
+            <EntityTypeMapping TypeName="YonyuModel.ZTIPP0002A">
+              <MappingFragment StoreEntitySet="ZTIPP0002A">
+                <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+                <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+                <ScalarProperty Name="AUART" ColumnName="AUART" />
+                <ScalarProperty Name="AUART_TXT" ColumnName="AUART_TXT" />
+                <ScalarProperty Name="PLNBEZ" ColumnName="PLNBEZ" />
+                <ScalarProperty Name="MAKTX" ColumnName="MAKTX" />
+                <ScalarProperty Name="GAMNG" ColumnName="GAMNG" />
+                <ScalarProperty Name="GASMG" ColumnName="GASMG" />
+                <ScalarProperty Name="GMEIN" ColumnName="GMEIN" />
+                <ScalarProperty Name="LGORT" ColumnName="LGORT" />
+                <ScalarProperty Name="KDAUF" ColumnName="KDAUF" />
+                <ScalarProperty Name="KDPOS" ColumnName="KDPOS" />
+                <ScalarProperty Name="KWMENG" ColumnName="KWMENG" />
+                <ScalarProperty Name="EDATU" ColumnName="EDATU" />
+                <ScalarProperty Name="KUNNR" ColumnName="KUNNR" />
+                <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+                <ScalarProperty Name="KDMAT" ColumnName="KDMAT" />
+                <ScalarProperty Name="POSTX" ColumnName="POSTX" />
+                <ScalarProperty Name="BSTNK" ColumnName="BSTNK" />
+                <ScalarProperty Name="ZLABELSIZE" ColumnName="ZLABELSIZE" />
+                <ScalarProperty Name="ZMFD" ColumnName="ZMFD" />
+                <ScalarProperty Name="ZMOILD" ColumnName="ZMOILD" />
+                <ScalarProperty Name="PRCTR" ColumnName="PRCTR" />
+                <ScalarProperty Name="KTEXT" ColumnName="KTEXT" />
+                <ScalarProperty Name="LVORM" ColumnName="LVORM" />
+                <ScalarProperty Name="ZTECO" ColumnName="ZTECO" />
+                <ScalarProperty Name="ERNAM_W" ColumnName="ERNAM_W" />
+                <ScalarProperty Name="CN_CREATE_DATE" ColumnName="CN_CREATE_DATE" />
+                <ScalarProperty Name="ERNAM_R" ColumnName="ERNAM_R" />
+                <ScalarProperty Name="CN_CHANGE_DATE" ColumnName="CN_CHANGE_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTIPP0002B">
+            <EntityTypeMapping TypeName="YonyuModel.ZTIPP0002B">
+              <MappingFragment StoreEntitySet="ZTIPP0002B">
+                <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+                <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+                <ScalarProperty Name="VORNR" ColumnName="VORNR" />
+                <ScalarProperty Name="UVORN" ColumnName="UVORN" />
+                <ScalarProperty Name="ARBPL" ColumnName="ARBPL" />
+                <ScalarProperty Name="KTEXT" ColumnName="KTEXT" />
+                <ScalarProperty Name="STEUS" ColumnName="STEUS" />
+                <ScalarProperty Name="KTSCH" ColumnName="KTSCH" />
+                <ScalarProperty Name="LTXA1" ColumnName="LTXA1" />
+                <ScalarProperty Name="MGVRG" ColumnName="MGVRG" />
+                <ScalarProperty Name="ASVRG" ColumnName="ASVRG" />
+                <ScalarProperty Name="MEINH" ColumnName="MEINH" />
+                <ScalarProperty Name="BMSCH" ColumnName="BMSCH" />
+                <ScalarProperty Name="VGW01" ColumnName="VGW01" />
+                <ScalarProperty Name="VGE01" ColumnName="VGE01" />
+                <ScalarProperty Name="VGW02" ColumnName="VGW02" />
+                <ScalarProperty Name="VGE02" ColumnName="VGE02" />
+                <ScalarProperty Name="VGW03" ColumnName="VGW03" />
+                <ScalarProperty Name="VGE03" ColumnName="VGE03" />
+                <ScalarProperty Name="VGW04" ColumnName="VGW04" />
+                <ScalarProperty Name="VGE04" ColumnName="VGE04" />
+                <ScalarProperty Name="VGW05" ColumnName="VGW05" />
+                <ScalarProperty Name="VGE05" ColumnName="VGE05" />
+                <ScalarProperty Name="VGW06" ColumnName="VGW06" />
+                <ScalarProperty Name="VGE06" ColumnName="VGE06" />
+                <ScalarProperty Name="LOEKZ" ColumnName="LOEKZ" />
+                <ScalarProperty Name="ERNAM_W" ColumnName="ERNAM_W" />
+                <ScalarProperty Name="CN_CREATE_DATE" ColumnName="CN_CREATE_DATE" />
+                <ScalarProperty Name="ERNAM_R" ColumnName="ERNAM_R" />
+                <ScalarProperty Name="CN_CHANGE_DATE" ColumnName="CN_CHANGE_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTIPP0003A">
+            <EntityTypeMapping TypeName="YonyuModel.ZTIPP0003A">
+              <MappingFragment StoreEntitySet="ZTIPP0003A">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+                <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+                <ScalarProperty Name="VORNR" ColumnName="VORNR" />
+                <ScalarProperty Name="ARBPL" ColumnName="ARBPL" />
+                <ScalarProperty Name="BUDAT" ColumnName="BUDAT" />
+                <ScalarProperty Name="ZMACHINE" ColumnName="ZMACHINE" />
+                <ScalarProperty Name="ZTYPE" ColumnName="ZTYPE" />
+                <ScalarProperty Name="LMNGA" ColumnName="LMNGA" />
+                <ScalarProperty Name="XMNGA" ColumnName="XMNGA" />
+                <ScalarProperty Name="ZUNIT1" ColumnName="ZUNIT1" />
+                <ScalarProperty Name="ZWORKHOUR" ColumnName="ZWORKHOUR" />
+                <ScalarProperty Name="ZEXWORKHOUR" ColumnName="ZEXWORKHOUR" />
+                <ScalarProperty Name="ZUNIT2" ColumnName="ZUNIT2" />
+                <ScalarProperty Name="ZEMPNUMBER" ColumnName="ZEMPNUMBER" />
+                <ScalarProperty Name="ZCOUNT" ColumnName="ZCOUNT" />
+                <ScalarProperty Name="RUECK" ColumnName="RUECK" />
+                <ScalarProperty Name="RMZHL" ColumnName="RMZHL" />
+                <ScalarProperty Name="ZBDCDT" ColumnName="ZBDCDT" />
+                <ScalarProperty Name="ZSTATUS" ColumnName="ZSTATUS" />
+                <ScalarProperty Name="ZLOG" ColumnName="ZLOG" />
+                <ScalarProperty Name="CN_FLAG" ColumnName="CN_FLAG" />
+                <ScalarProperty Name="ERNAM_W" ColumnName="ERNAM_W" />
+                <ScalarProperty Name="CN_CREATE_DATE" ColumnName="CN_CREATE_DATE" />
+                <ScalarProperty Name="ERNAM_R" ColumnName="ERNAM_R" />
+                <ScalarProperty Name="CN_CHANGE_DATE" ColumnName="CN_CHANGE_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZTIPP0004A">
+            <EntityTypeMapping TypeName="YonyuModel.ZTIPP0004A">
+              <MappingFragment StoreEntitySet="ZTIPP0004A">
+                <ScalarProperty Name="APPLY_NO" ColumnName="APPLY_NO" />
+                <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+                <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+                <ScalarProperty Name="KTSCH" ColumnName="KTSCH" />
+                <ScalarProperty Name="LTXA1" ColumnName="LTXA1" />
+                <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+                <ScalarProperty Name="CHARG" ColumnName="CHARG" />
+                <ScalarProperty Name="MENGE" ColumnName="MENGE" />
+                <ScalarProperty Name="MEINS" ColumnName="MEINS" />
+                <ScalarProperty Name="LGORT" ColumnName="LGORT" />
+                <ScalarProperty Name="BUDAT" ColumnName="BUDAT" />
+                <ScalarProperty Name="ZSTATUS" ColumnName="ZSTATUS" />
+                <ScalarProperty Name="ZLOG" ColumnName="ZLOG" />
+                <ScalarProperty Name="MJAHR" ColumnName="MJAHR" />
+                <ScalarProperty Name="MBLNR" ColumnName="MBLNR" />
+                <ScalarProperty Name="CN_FLAG" ColumnName="CN_FLAG" />
+                <ScalarProperty Name="ERNAM_W" ColumnName="ERNAM_W" />
+                <ScalarProperty Name="CN_CREATE_DATE" ColumnName="CN_CREATE_DATE" />
+                <ScalarProperty Name="ERNAM_R" ColumnName="ERNAM_R" />
+                <ScalarProperty Name="CN_CHANGE_DATE" ColumnName="CN_CHANGE_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApparadusConfig">
+            <EntityTypeMapping TypeName="YonyuModel.ApparadusConfig">
+              <MappingFragment StoreEntitySet="ApparadusConfig">
+                <ScalarProperty Name="Werk" ColumnName="Werk" />
+                <ScalarProperty Name="ApparadusID" ColumnName="ApparadusID" />
+                <ScalarProperty Name="ApparadusNo" ColumnName="ApparadusNo" />
+                <ScalarProperty Name="ApparadusName" ColumnName="ApparadusName" />
+                <ScalarProperty Name="ApparadusDescription" ColumnName="ApparadusDescription" />
+                <ScalarProperty Name="ApparadusMfgDate" ColumnName="ApparadusMfgDate" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="DisableFlag" ColumnName="DisableFlag" />
+                <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+                <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BartenderConfig">
+            <EntityTypeMapping TypeName="YonyuModel.BartenderConfig">
+              <MappingFragment StoreEntitySet="BartenderConfig">
+                <ScalarProperty Name="bID" ColumnName="bID" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="LabelDescription" ColumnName="LabelDescription" />
+                <ScalarProperty Name="LabelTemplatePath" ColumnName="LabelTemplatePath" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerComplaintRecord">
+            <EntityTypeMapping TypeName="YonyuModel.CustomerComplaintRecord">
+              <MappingFragment StoreEntitySet="CustomerComplaintRecord">
+                <ScalarProperty Name="cID" ColumnName="cID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventCodeConfig">
+            <EntityTypeMapping TypeName="YonyuModel.EventCodeConfig">
+              <MappingFragment StoreEntitySet="EventCodeConfig">
+                <ScalarProperty Name="eID" ColumnName="eID" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FactoryConfig">
+            <EntityTypeMapping TypeName="YonyuModel.FactoryConfig">
+              <MappingFragment StoreEntitySet="FactoryConfig">
+                <ScalarProperty Name="fID" ColumnName="fID" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+                <ScalarProperty Name="PalletCodePrefix" ColumnName="PalletCodePrefix" />
+                <ScalarProperty Name="SupportWorkCenter" ColumnName="SupportWorkCenter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FloorInventory">
+            <EntityTypeMapping TypeName="YonyuModel.FloorInventory">
+              <MappingFragment StoreEntitySet="FloorInventory">
+                <ScalarProperty Name="fID" ColumnName="fID" />
+                <ScalarProperty Name="PalletCode" ColumnName="PalletCode" />
+                <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+                <ScalarProperty Name="MaterialNo" ColumnName="MaterialNo" />
+                <ScalarProperty Name="FirstInStock" ColumnName="FirstInStock" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="CartonID" ColumnName="CartonID" />
+                <ScalarProperty Name="PcsCarton" ColumnName="PcsCarton" />
+                <ScalarProperty Name="FloorStockID" ColumnName="FloorStockID" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupSet">
+            <EntityTypeMapping TypeName="YonyuModel.GroupSet">
+              <MappingFragment StoreEntitySet="GroupSet">
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="GroupNameCn" ColumnName="GroupNameCn" />
+                <ScalarProperty Name="GroupNameEn" ColumnName="GroupNameEn" />
+                <ScalarProperty Name="Reportlet" ColumnName="Reportlet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MachineConfig">
+            <EntityTypeMapping TypeName="YonyuModel.MachineConfig">
+              <MappingFragment StoreEntitySet="MachineConfig">
+                <ScalarProperty Name="fID" ColumnName="fID" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="WorkCenter" ColumnName="WorkCenter" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ManufacturerConfig">
+            <EntityTypeMapping TypeName="YonyuModel.ManufacturerConfig">
+              <MappingFragment StoreEntitySet="ManufacturerConfig">
+                <ScalarProperty Name="Werk" ColumnName="Werk" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+                <ScalarProperty Name="DistinguishCode" ColumnName="DistinguishCode" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+                <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MoldConfig">
+            <EntityTypeMapping TypeName="YonyuModel.MoldConfig">
+              <MappingFragment StoreEntitySet="MoldConfig">
+                <ScalarProperty Name="Werk" ColumnName="Werk" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="MoldID" ColumnName="MoldID" />
+                <ScalarProperty Name="MoldNo" ColumnName="MoldNo" />
+                <ScalarProperty Name="MoldMfgDate" ColumnName="MoldMfgDate" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="DisableFlag" ColumnName="DisableFlag" />
+                <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+                <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MoldIDAssociationConfig">
+            <EntityTypeMapping TypeName="YonyuModel.MoldIDAssociationConfig">
+              <MappingFragment StoreEntitySet="MoldIDAssociationConfig">
+                <ScalarProperty Name="MoldID" ColumnName="MoldID" />
+                <ScalarProperty Name="ApparadusID" ColumnName="ApparadusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MoldTransaction">
+            <EntityTypeMapping TypeName="YonyuModel.MoldTransaction">
+              <MappingFragment StoreEntitySet="MoldTransaction">
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="Werk" ColumnName="Werk" />
+                <ScalarProperty Name="MoldID" ColumnName="MoldID" />
+                <ScalarProperty Name="ApparadusID" ColumnName="ApparadusID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Usage" ColumnName="Usage" />
+                <ScalarProperty Name="UsingDescription" ColumnName="UsingDescription" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="TransactionTypeNo" ColumnName="TransactionTypeNo" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+                <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PalletTag">
+            <EntityTypeMapping TypeName="YonyuModel.PalletTag">
+              <MappingFragment StoreEntitySet="PalletTag">
+                <ScalarProperty Name="pID" ColumnName="pID" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="FactoryPrefix" ColumnName="FactoryPrefix" />
+                <ScalarProperty Name="PalletCode" ColumnName="PalletCode" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StockID" ColumnName="StockID" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PostDateConfig">
+            <EntityTypeMapping TypeName="YonyuModel.PostDateConfig">
+              <MappingFragment StoreEntitySet="PostDateConfig">
+                <ScalarProperty Name="pID" ColumnName="pID" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+                <ScalarProperty Name="PostDate" ColumnName="PostDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Production">
+            <EntityTypeMapping TypeName="YonyuModel.Production">
+              <MappingFragment StoreEntitySet="Production">
+                <ScalarProperty Name="pID" ColumnName="pID" />
+                <ScalarProperty Name="FactoryArea" ColumnName="FactoryArea" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+                <ScalarProperty Name="MaterialNo" ColumnName="MaterialNo" />
+                <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="ProcessDescription" ColumnName="ProcessDescription" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="OrderQty" ColumnName="OrderQty" />
+                <ScalarProperty Name="CartonID" ColumnName="CartonID" />
+                <ScalarProperty Name="PcsCarton" ColumnName="PcsCarton" />
+                <ScalarProperty Name="ProductionQty" ColumnName="ProductionQty" />
+                <ScalarProperty Name="ScrapQty" ColumnName="ScrapQty" />
+                <ScalarProperty Name="PalletCode" ColumnName="PalletCode" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="QualityTime" ColumnName="QualityTime" />
+                <ScalarProperty Name="QualityShift" ColumnName="QualityShift" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="StockInOrderNo" ColumnName="StockInOrderNo" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="ProductionType" ColumnName="ProductionType" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Cavity" ColumnName="Cavity" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="ScrapDescription" ColumnName="ScrapDescription" />
+                <ScalarProperty Name="wID" ColumnName="wID" />
+                <ScalarProperty Name="Editor" ColumnName="Editor" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductionLog">
+            <EntityTypeMapping TypeName="YonyuModel.ProductionLog">
+              <MappingFragment StoreEntitySet="ProductionLog">
+                <ScalarProperty Name="pID" ColumnName="pID" />
+                <ScalarProperty Name="FactoryArea" ColumnName="FactoryArea" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+                <ScalarProperty Name="MaterialNo" ColumnName="MaterialNo" />
+                <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="ProcessDescription" ColumnName="ProcessDescription" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="CartonID" ColumnName="CartonID" />
+                <ScalarProperty Name="PcsCarton" ColumnName="PcsCarton" />
+                <ScalarProperty Name="ProductionQty" ColumnName="ProductionQty" />
+                <ScalarProperty Name="ScrapQty" ColumnName="ScrapQty" />
+                <ScalarProperty Name="PalletCode" ColumnName="PalletCode" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="QualityTime" ColumnName="QualityTime" />
+                <ScalarProperty Name="QualityShift" ColumnName="QualityShift" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="StockInOrderNo" ColumnName="StockInOrderNo" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="ProductionType" ColumnName="ProductionType" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Cavity" ColumnName="Cavity" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="ScrapDescription" ColumnName="ScrapDescription" />
+                <ScalarProperty Name="wID" ColumnName="wID" />
+                <ScalarProperty Name="Editor" ColumnName="Editor" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjectCodeConfig">
+            <EntityTypeMapping TypeName="YonyuModel.ProjectCodeConfig">
+              <MappingFragment StoreEntitySet="ProjectCodeConfig">
+                <ScalarProperty Name="pID" ColumnName="pID" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QualityInvalidRecord">
+            <EntityTypeMapping TypeName="YonyuModel.QualityInvalidRecord">
+              <MappingFragment StoreEntitySet="QualityInvalidRecord">
+                <ScalarProperty Name="qID" ColumnName="qID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+                <ScalarProperty Name="FirstItemQuality" ColumnName="FirstItemQuality" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="Minute" ColumnName="Minute" />
+                <ScalarProperty Name="KeepQty" ColumnName="KeepQty" />
+                <ScalarProperty Name="KeepStartCartonID" ColumnName="KeepStartCartonID" />
+                <ScalarProperty Name="KeepEndCartonID" ColumnName="KeepEndCartonID" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="WorkingTime" ColumnName="WorkingTime" />
+                <ScalarProperty Name="ScrapQty" ColumnName="ScrapQty" />
+                <ScalarProperty Name="Mold" ColumnName="Mold" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReworkScrapRecord">
+            <EntityTypeMapping TypeName="YonyuModel.ReworkScrapRecord">
+              <MappingFragment StoreEntitySet="ReworkScrapRecord">
+                <ScalarProperty Name="rID" ColumnName="rID" />
+                <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="ProcessDescription" ColumnName="ProcessDescription" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="ReworkScrapQty" ColumnName="ReworkScrapQty" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ScrapRecord">
+            <EntityTypeMapping TypeName="YonyuModel.ScrapRecord">
+              <MappingFragment StoreEntitySet="ScrapRecord">
+                <ScalarProperty Name="sID" ColumnName="sID" />
+                <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="ProcessDescription" ColumnName="ProcessDescription" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="ScrapQty" ColumnName="ScrapQty" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockConfig">
+            <EntityTypeMapping TypeName="YonyuModel.StockConfig">
+              <MappingFragment StoreEntitySet="StockConfig">
+                <ScalarProperty Name="sID" ColumnName="sID" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="StockID" ColumnName="StockID" />
+                <ScalarProperty Name="StockName" ColumnName="StockName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockInOrder">
+            <EntityTypeMapping TypeName="YonyuModel.StockInOrder">
+              <MappingFragment StoreEntitySet="StockInOrder">
+                <ScalarProperty Name="soID" ColumnName="soID" />
+                <ScalarProperty Name="StockInOrderNo" ColumnName="StockInOrderNo" />
+                <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+                <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+                <ScalarProperty Name="StockID" ColumnName="StockID" />
+                <ScalarProperty Name="PalletCodes" ColumnName="PalletCodes" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransactionConfig">
+            <EntityTypeMapping TypeName="YonyuModel.TransactionConfig">
+              <MappingFragment StoreEntitySet="TransactionConfig">
+                <ScalarProperty Name="Werk" ColumnName="Werk" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="TransactionTypeNo" ColumnName="TransactionTypeNo" />
+                <ScalarProperty Name="TransactionTypeName" ColumnName="TransactionTypeName" />
+                <ScalarProperty Name="Plus_Minus_Code" ColumnName="Plus-Minus Code" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+                <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserData">
+            <EntityTypeMapping TypeName="YonyuModel.UserData">
+              <MappingFragment StoreEntitySet="UserData">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="NameCn" ColumnName="NameCn" />
+                <ScalarProperty Name="NameEn" ColumnName="NameEn" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkerConfig">
+            <EntityTypeMapping TypeName="YonyuModel.WorkerConfig">
+              <MappingFragment StoreEntitySet="WorkerConfig">
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="WorkerId" ColumnName="WorkerId" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="WorkerNo" ColumnName="WorkerNo" />
+                <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkingHours">
+            <EntityTypeMapping TypeName="YonyuModel.WorkingHours">
+              <MappingFragment StoreEntitySet="WorkingHours">
+                <ScalarProperty Name="wID" ColumnName="wID" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+                <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="ProcessDescription" ColumnName="ProcessDescription" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+                <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+                <ScalarProperty Name="WorkingTime" ColumnName="WorkingTime" />
+                <ScalarProperty Name="AbnormalTime" ColumnName="AbnormalTime" />
+                <ScalarProperty Name="Workers" ColumnName="Workers" />
+                <ScalarProperty Name="OperationType" ColumnName="OperationType" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="ProductionType" ColumnName="ProductionType" />
+                <ScalarProperty Name="Mold" ColumnName="Mold" />
+                <ScalarProperty Name="Test" ColumnName="Test" />
+                <ScalarProperty Name="Malfunction" ColumnName="Malfunction" />
+                <ScalarProperty Name="Adjustment" ColumnName="Adjustment" />
+                <ScalarProperty Name="MaterialAbnormal" ColumnName="MaterialAbnormal" />
+                <ScalarProperty Name="MoldAbnormal" ColumnName="MoldAbnormal" />
+                <ScalarProperty Name="Other" ColumnName="Other" />
+                <ScalarProperty Name="InvalidTime" ColumnName="InvalidTime" />
+                <ScalarProperty Name="InvalidDescription" ColumnName="InvalidDescription" />
+                <ScalarProperty Name="MoldNo" ColumnName="MoldNo" />
+                <ScalarProperty Name="MoldName" ColumnName="MoldName" />
+                <ScalarProperty Name="DepartmentNo" ColumnName="DepartmentNo" />
+                <ScalarProperty Name="MoldStatus" ColumnName="MoldStatus" />
+                <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="ProductionQty" ColumnName="ProductionQty" />
+                <ScalarProperty Name="QualifiedQty" ColumnName="QualifiedQty" />
+                <ScalarProperty Name="ScrapQty" ColumnName="ScrapQty" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Editor" ColumnName="Editor" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkingHoursDescription">
+            <EntityTypeMapping TypeName="YonyuModel.WorkingHoursDescription">
+              <MappingFragment StoreEntitySet="WorkingHoursDescription">
+                <ScalarProperty Name="wID" ColumnName="wID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+                <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+                <ScalarProperty Name="Process" ColumnName="Process" />
+                <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+                <ScalarProperty Name="MtTypeItems" ColumnName="MtTypeItems" />
+                <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+                <ScalarProperty Name="DtTypeItems" ColumnName="DtTypeItems" />
+                <ScalarProperty Name="InvalidDescription" ColumnName="InvalidDescription" />
+                <ScalarProperty Name="Improve" ColumnName="Improve" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YearShiftConfig">
+            <EntityTypeMapping TypeName="YonyuModel.YearShiftConfig">
+              <MappingFragment StoreEntitySet="YearShiftConfig">
+                <ScalarProperty Name="yID" ColumnName="yID" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+                <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+                <ScalarProperty Name="ShiftIndex" ColumnName="ShiftIndex" />
+                <ScalarProperty Name="DayNight" ColumnName="DayNight" />
+                <ScalarProperty Name="ShiftStart" ColumnName="ShiftStart" />
+                <ScalarProperty Name="ShiftEnd" ColumnName="ShiftEnd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

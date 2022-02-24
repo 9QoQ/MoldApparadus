@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YonyuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ZTIPP0001A">
+    <Key>
+      <PropertyRef Name="MATNR" />
+      <PropertyRef Name="WERKS" />
+    </Key>
+    <Property Name="MATNR" Type="String" MaxLength="18" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MAKTX" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MEINS" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="LGPRO" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="NTGEW" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="BRGEW" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="GEWEI" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ZCARTONQTY" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="ZLABELSIZE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ZINNERTEXT" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ZSPEC" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ZTEMPERATURE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ZORIGIN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ZMATERIAL2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ZMATERIAL" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ZCOLOUR" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ZDESC" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ZMULTIPLE" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="ZCBM" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ZUPC_CODE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ZCGC_PART_NUMBER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="KUNNR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NAME1" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="KDMAT" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="POSTX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ZFR1" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="ZCAVITY" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="RBTXT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LVORM" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ERNAM_W" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CN_CREATE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="ERNAM_R" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CN_CHANGE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ZTIPP0002A">
+    <Key>
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="AUFNR" />
+    </Key>
+    <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AUART" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="AUART_TXT" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PLNBEZ" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MAKTX" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="GAMNG" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="GASMG" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="GMEIN" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="LGORT" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="KDAUF" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="KDPOS" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="KWMENG" Type="Decimal" Precision="15" Scale="3" />
+    <Property Name="EDATU" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="KUNNR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NAME1" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="KDMAT" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="POSTX" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BSTNK" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ZLABELSIZE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ZMFD" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ZMOILD" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PRCTR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="KTEXT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LVORM" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ZTECO" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ERNAM_W" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CN_CREATE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="ERNAM_R" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CN_CHANGE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ZTIPP0002B">
+    <Key>
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="AUFNR" />
+      <PropertyRef Name="VORNR" />
+      <PropertyRef Name="UVORN" />
+    </Key>
+    <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VORNR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UVORN" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ARBPL" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="KTEXT" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="STEUS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="KTSCH" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="LTXA1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MGVRG" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="ASVRG" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="MEINH" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="BMSCH" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="VGW01" Type="Decimal" Precision="9" Scale="3" />
+    <Property Name="VGE01" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="VGW02" Type="Decimal" Precision="9" Scale="3" />
+    <Property Name="VGE02" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="VGW03" Type="Decimal" Precision="9" Scale="3" />
+    <Property Name="VGE03" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="VGW04" Type="Decimal" Precision="9" Scale="3" />
+    <Property Name="VGE04" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="VGW05" Type="Decimal" Precision="9" Scale="3" />
+    <Property Name="VGE05" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="VGW06" Type="Decimal" Precision="9" Scale="3" />
+    <Property Name="VGE06" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="LOEKZ" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ERNAM_W" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CN_CREATE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="ERNAM_R" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CN_CHANGE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ZTIPP0003A">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="WERKS" />
+      <PropertyRef Name="AUFNR" />
+      <PropertyRef Name="VORNR" />
+      <PropertyRef Name="ARBPL" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VORNR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ARBPL" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BUDAT" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ZMACHINE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ZTYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="LMNGA" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="XMNGA" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="ZUNIT1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ZWORKHOUR" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="ZEXWORKHOUR" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="ZUNIT2" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="ZEMPNUMBER" Type="Decimal" Precision="3" Scale="1" />
+    <Property Name="ZCOUNT" Type="Decimal" Precision="3" Scale="1" />
+    <Property Name="RUECK" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="RMZHL" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="ZBDCDT" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="ZSTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ZLOG" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CN_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ERNAM_W" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CN_CREATE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="ERNAM_R" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CN_CHANGE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ZTIPP0004A">
+    <Key>
+      <PropertyRef Name="APPLY_NO" />
+      <PropertyRef Name="AUFNR" />
+    </Key>
+    <Property Name="APPLY_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AUFNR" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WERKS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="KTSCH" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="LTXA1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MATNR" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CHARG" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MENGE" Type="Decimal" Precision="13" Scale="3" />
+    <Property Name="MEINS" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="LGORT" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="BUDAT" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="ZSTATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ZLOG" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MJAHR" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="MBLNR" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CN_FLAG" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ERNAM_W" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CN_CREATE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="ERNAM_R" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="CN_CHANGE_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ApparadusConfig">
+    <Key>
+      <PropertyRef Name="Werk" />
+      <PropertyRef Name="ApparadusID" />
+      <PropertyRef Name="ApparadusNo" />
+      <PropertyRef Name="ApparadusName" />
+      <PropertyRef Name="ApparadusDescription" />
+      <PropertyRef Name="ApparadusMfgDate" />
+      <PropertyRef Name="ManufacturerID" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="DisableFlag" />
+      <PropertyRef Name="LmDate" />
+      <PropertyRef Name="LmBy" />
+    </Key>
+    <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApparadusID" Type="Int64" Nullable="false" />
+    <Property Name="ApparadusNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApparadusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApparadusDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApparadusMfgDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DisableFlag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BartenderConfig">
+    <Key>
+      <PropertyRef Name="bID" />
+    </Key>
+    <Property Name="bID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Version" Type="DateTime" Precision="3" />
+    <Property Name="LabelDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LabelTemplatePath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CustomerComplaintRecord">
+    <Key>
+      <PropertyRef Name="cID" />
+    </Key>
+    <Property Name="cID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="FactoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="EventCodeConfig">
+    <Key>
+      <PropertyRef Name="eID" />
+    </Key>
+    <Property Name="eID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Version" Type="DateTime" Precision="3" />
+    <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EventType" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="EventDescription" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="EventCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FactoryConfig">
+    <Key>
+      <PropertyRef Name="fID" />
+    </Key>
+    <Property Name="fID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Version" Type="DateTime" Precision="3" />
+    <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="PalletCodePrefix" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SupportWorkCenter" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FloorInventory">
+    <Key>
+      <PropertyRef Name="fID" />
+    </Key>
+    <Property Name="fID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PalletCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkorderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="FirstInStock" Type="DateTime" Precision="3" />
+    <Property Name="Process" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MachineID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CartonID" Type="Int32" />
+    <Property Name="PcsCarton" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="FloorStockID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GroupSet">
+    <Key>
+      <PropertyRef Name="GroupID" />
+      <PropertyRef Name="GroupNameCn" />
+      <PropertyRef Name="GroupNameEn" />
+    </Key>
+    <Property Name="GroupID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupNameCn" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GroupNameEn" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Reportlet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MachineConfig">
+    <Key>
+      <PropertyRef Name="fID" />
+    </Key>
+    <Property Name="fID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Version" Type="DateTime" Precision="3" />
+    <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WorkCenter" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MachineID" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="MachineName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ManufacturerConfig">
+    <Key>
+      <PropertyRef Name="Werk" />
+      <PropertyRef Name="ManufacturerID" />
+      <PropertyRef Name="ManufacturerName" />
+      <PropertyRef Name="DistinguishCode" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="LmDate" />
+      <PropertyRef Name="LmBy" />
+    </Key>
+    <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+    <Property Name="ManufacturerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DistinguishCode" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MoldConfig">
+    <Key>
+      <PropertyRef Name="Werk" />
+      <PropertyRef Name="FactoryID" />
+      <PropertyRef Name="MoldID" />
+      <PropertyRef Name="MoldNo" />
+      <PropertyRef Name="MoldMfgDate" />
+      <PropertyRef Name="ManufacturerID" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="DisableFlag" />
+      <PropertyRef Name="LmDate" />
+      <PropertyRef Name="LmBy" />
+    </Key>
+    <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoldID" Type="Int64" Nullable="false" />
+    <Property Name="MoldNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoldMfgDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DisableFlag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MoldIDAssociationConfig">
+    <Key>
+      <PropertyRef Name="MoldID" />
+      <PropertyRef Name="ApparadusID" />
+    </Key>
+    <Property Name="MoldID" Type="Int64" Nullable="false" />
+    <Property Name="ApparadusID" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MoldTransaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+      <PropertyRef Name="Werk" />
+      <PropertyRef Name="MoldID" />
+      <PropertyRef Name="ApparadusID" />
+      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="Usage" />
+      <PropertyRef Name="TransactionTypeNo" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="LmDate" />
+      <PropertyRef Name="LmBy" />
+    </Key>
+    <Property Name="TransactionID" Type="Int64" Nullable="false" />
+    <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MoldID" Type="Int64" Nullable="false" />
+    <Property Name="ApparadusID" Type="Int64" Nullable="false" />
+    <Property Name="Quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Usage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UsingDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TransactionTypeNo" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PalletTag">
+    <Key>
+      <PropertyRef Name="pID" />
+    </Key>
+    <Property Name="pID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryPrefix" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PalletCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="StockID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PostDateConfig">
+    <Key>
+      <PropertyRef Name="pID" />
+    </Key>
+    <Property Name="pID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Version" Type="DateTime" Precision="3" />
+    <Property Name="RequestDate" Type="DateTime" Precision="3" />
+    <Property Name="PostDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Production">
+    <Key>
+      <PropertyRef Name="pID" />
+    </Key>
+    <Property Name="pID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryArea" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="WorkorderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Process" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MachineID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderQty" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="CartonID" Type="Int32" />
+    <Property Name="PcsCarton" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="ProductionQty" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="ScrapQty" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="PalletCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Shift" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="QualityTime" Type="DateTime" Precision="3" />
+    <Property Name="QualityShift" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="StockInOrderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PublishDate" Type="DateTime" Precision="3" />
+    <Property Name="ProductionType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Cavity" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Period" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="ScrapDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="wID" Type="Int64" />
+    <Property Name="Editor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProductionLog">
+    <Key>
+      <PropertyRef Name="pID" />
+    </Key>
+    <Property Name="pID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryArea" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="WorkorderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Process" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MachineID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CartonID" Type="Int32" />
+    <Property Name="PcsCarton" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="ProductionQty" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="ScrapQty" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="PalletCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Shift" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="QualityTime" Type="DateTime" Precision="3" />
+    <Property Name="QualityShift" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="StockInOrderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PublishDate" Type="DateTime" Precision="3" />
+    <Property Name="ProductionType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Cavity" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Period" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="ScrapDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="wID" Type="Int64" />
+    <Property Name="Editor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProjectCodeConfig">
+    <Key>
+      <PropertyRef Name="pID" />
+    </Key>
+    <Property Name="pID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Version" Type="DateTime" Precision="3" />
+    <Property Name="ProjectCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="QualityInvalidRecord">
+    <Key>
+      <PropertyRef Name="qID" />
+    </Key>
+    <Property Name="qID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Shift" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MachineID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="WorkorderNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Process" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="FirstItemQuality" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Hour" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Minute" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="KeepQty" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="KeepStartCartonID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="KeepEndCartonID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Result" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="WorkingTime" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ScrapQty" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Mold" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ReworkScrapRecord">
+    <Key>
+      <PropertyRef Name="rID" />
+    </Key>
+    <Property Name="rID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkorderNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Process" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MachineID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ReworkScrapQty" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Shift" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="PublishDate" Type="DateTime" Precision="3" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ScrapRecord">
+    <Key>
+      <PropertyRef Name="sID" />
+    </Key>
+    <Property Name="sID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkorderNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Process" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MachineID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ScrapQty" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Shift" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="PublishDate" Type="DateTime" Precision="3" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="StockConfig">
+    <Key>
+      <PropertyRef Name="sID" />
+    </Key>
+    <Property Name="sID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Version" Type="DateTime" Precision="7" />
+    <Property Name="AreaID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="AreaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StockID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="StockName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="StockInOrder">
+    <Key>
+      <PropertyRef Name="soID" />
+    </Key>
+    <Property Name="soID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockInOrderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RequestDate" Type="DateTime" Precision="3" />
+    <Property Name="ReceiveDate" Type="DateTime" Precision="3" />
+    <Property Name="StockID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PalletCodes" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TransactionConfig">
+    <Key>
+      <PropertyRef Name="Werk" />
+      <PropertyRef Name="FactoryID" />
+      <PropertyRef Name="TransactionTypeNo" />
+      <PropertyRef Name="TransactionTypeName" />
+      <PropertyRef Name="Plus_Minus_Code" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreatedBy" />
+      <PropertyRef Name="LmDate" />
+      <PropertyRef Name="LmBy" />
+    </Key>
+    <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TransactionTypeNo" Type="Int32" Nullable="false" />
+    <Property Name="TransactionTypeName" Type="Int32" Nullable="false" />
+    <Property Name="Plus_Minus_Code" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserData">
+    <Key>
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NameCn" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NameEn" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="GroupID" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="WorkerConfig">
+    <Key>
+      <PropertyRef Name="WorkerId" />
+    </Key>
+    <Property Name="Version" Type="DateTime" Precision="3" />
+    <Property Name="WorkerId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Department" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WorkerNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WorkerName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="WorkingHours">
+    <Key>
+      <PropertyRef Name="wID" />
+    </Key>
+    <Property Name="wID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Shift" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="WorkorderNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MachineID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Process" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EventType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EventCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EventDateTime" Type="DateTime" Precision="3" />
+    <Property Name="WorkingTime" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="AbnormalTime" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Workers" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OperationType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProductionType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Mold" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Test" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Malfunction" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Adjustment" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="MaterialAbnormal" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="MoldAbnormal" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Other" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="InvalidTime" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="InvalidDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MoldNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MoldName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MoldStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProductionQty" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="QualifiedQty" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="ScrapQty" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Editor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PublishDate" Type="DateTime" Precision="3" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="WorkingHoursDescription">
+    <Key>
+      <PropertyRef Name="wID" />
+    </Key>
+    <Property Name="wID" Type="Int64" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Shift" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MachineID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="WorkorderNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Process" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="EventDateTime" Type="DateTime" Precision="3" />
+    <Property Name="MtTypeItems" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="EventDescription" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="DtTypeItems" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="InvalidDescription" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="Improve" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="LmTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="YearShiftConfig">
+    <Key>
+      <PropertyRef Name="yID" />
+    </Key>
+    <Property Name="yID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Version" Type="DateTime" Precision="3" />
+    <Property Name="Year" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShiftID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShiftIndex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DayNight" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShiftStart" Type="DateTime" Precision="3" />
+    <Property Name="ShiftEnd" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="YonYuEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="ZTIPP0001A" EntityType="Self.ZTIPP0001A" />
+    <EntitySet Name="ZTIPP0002A" EntityType="Self.ZTIPP0002A" />
+    <EntitySet Name="ZTIPP0002B" EntityType="Self.ZTIPP0002B" />
+    <EntitySet Name="ZTIPP0003A" EntityType="Self.ZTIPP0003A" />
+    <EntitySet Name="ZTIPP0004A" EntityType="Self.ZTIPP0004A" />
+    <EntitySet Name="ApparadusConfig" EntityType="Self.ApparadusConfig" />
+    <EntitySet Name="BartenderConfig" EntityType="Self.BartenderConfig" />
+    <EntitySet Name="CustomerComplaintRecord" EntityType="Self.CustomerComplaintRecord" />
+    <EntitySet Name="EventCodeConfig" EntityType="Self.EventCodeConfig" />
+    <EntitySet Name="FactoryConfig" EntityType="Self.FactoryConfig" />
+    <EntitySet Name="FloorInventory" EntityType="Self.FloorInventory" />
+    <EntitySet Name="GroupSet" EntityType="Self.GroupSet" />
+    <EntitySet Name="MachineConfig" EntityType="Self.MachineConfig" />
+    <EntitySet Name="ManufacturerConfig" EntityType="Self.ManufacturerConfig" />
+    <EntitySet Name="MoldConfig" EntityType="Self.MoldConfig" />
+    <EntitySet Name="MoldIDAssociationConfig" EntityType="Self.MoldIDAssociationConfig" />
+    <EntitySet Name="MoldTransaction" EntityType="Self.MoldTransaction" />
+    <EntitySet Name="PalletTag" EntityType="Self.PalletTag" />
+    <EntitySet Name="PostDateConfig" EntityType="Self.PostDateConfig" />
+    <EntitySet Name="Production" EntityType="Self.Production" />
+    <EntitySet Name="ProductionLog" EntityType="Self.ProductionLog" />
+    <EntitySet Name="ProjectCodeConfig" EntityType="Self.ProjectCodeConfig" />
+    <EntitySet Name="QualityInvalidRecord" EntityType="Self.QualityInvalidRecord" />
+    <EntitySet Name="ReworkScrapRecord" EntityType="Self.ReworkScrapRecord" />
+    <EntitySet Name="ScrapRecord" EntityType="Self.ScrapRecord" />
+    <EntitySet Name="StockConfig" EntityType="Self.StockConfig" />
+    <EntitySet Name="StockInOrder" EntityType="Self.StockInOrder" />
+    <EntitySet Name="TransactionConfig" EntityType="Self.TransactionConfig" />
+    <EntitySet Name="UserData" EntityType="Self.UserData" />
+    <EntitySet Name="WorkerConfig" EntityType="Self.WorkerConfig" />
+    <EntitySet Name="WorkingHours" EntityType="Self.WorkingHours" />
+    <EntitySet Name="WorkingHoursDescription" EntityType="Self.WorkingHoursDescription" />
+    <EntitySet Name="YearShiftConfig" EntityType="Self.YearShiftConfig" />
+  </EntityContainer>
+</Schema>

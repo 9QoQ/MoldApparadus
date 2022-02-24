@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YonyuModelStoreContainer" CdmEntityContainer="YonYuEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="YonyuModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTIPP0001A">
+      <EntityTypeMapping TypeName="YonyuModel.ZTIPP0001A">
+        <MappingFragment StoreEntitySet="ZTIPP0001A">
+          <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="MAKTX" ColumnName="MAKTX" />
+          <ScalarProperty Name="MEINS" ColumnName="MEINS" />
+          <ScalarProperty Name="LGPRO" ColumnName="LGPRO" />
+          <ScalarProperty Name="NTGEW" ColumnName="NTGEW" />
+          <ScalarProperty Name="BRGEW" ColumnName="BRGEW" />
+          <ScalarProperty Name="GEWEI" ColumnName="GEWEI" />
+          <ScalarProperty Name="ZCARTONQTY" ColumnName="ZCARTONQTY" />
+          <ScalarProperty Name="ZLABELSIZE" ColumnName="ZLABELSIZE" />
+          <ScalarProperty Name="ZINNERTEXT" ColumnName="ZINNERTEXT" />
+          <ScalarProperty Name="ZSPEC" ColumnName="ZSPEC" />
+          <ScalarProperty Name="ZTEMPERATURE" ColumnName="ZTEMPERATURE" />
+          <ScalarProperty Name="ZORIGIN" ColumnName="ZORIGIN" />
+          <ScalarProperty Name="ZMATERIAL2" ColumnName="ZMATERIAL2" />
+          <ScalarProperty Name="ZMATERIAL" ColumnName="ZMATERIAL" />
+          <ScalarProperty Name="ZCOLOUR" ColumnName="ZCOLOUR" />
+          <ScalarProperty Name="ZDESC" ColumnName="ZDESC" />
+          <ScalarProperty Name="ZMULTIPLE" ColumnName="ZMULTIPLE" />
+          <ScalarProperty Name="ZCBM" ColumnName="ZCBM" />
+          <ScalarProperty Name="ZUPC_CODE" ColumnName="ZUPC_CODE" />
+          <ScalarProperty Name="ZCGC_PART_NUMBER" ColumnName="ZCGC_PART_NUMBER" />
+          <ScalarProperty Name="KUNNR" ColumnName="KUNNR" />
+          <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+          <ScalarProperty Name="KDMAT" ColumnName="KDMAT" />
+          <ScalarProperty Name="POSTX" ColumnName="POSTX" />
+          <ScalarProperty Name="ZFR1" ColumnName="ZFR1" />
+          <ScalarProperty Name="ZCAVITY" ColumnName="ZCAVITY" />
+          <ScalarProperty Name="RBTXT" ColumnName="RBTXT" />
+          <ScalarProperty Name="LVORM" ColumnName="LVORM" />
+          <ScalarProperty Name="ERNAM_W" ColumnName="ERNAM_W" />
+          <ScalarProperty Name="CN_CREATE_DATE" ColumnName="CN_CREATE_DATE" />
+          <ScalarProperty Name="ERNAM_R" ColumnName="ERNAM_R" />
+          <ScalarProperty Name="CN_CHANGE_DATE" ColumnName="CN_CHANGE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTIPP0002A">
+      <EntityTypeMapping TypeName="YonyuModel.ZTIPP0002A">
+        <MappingFragment StoreEntitySet="ZTIPP0002A">
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+          <ScalarProperty Name="AUART" ColumnName="AUART" />
+          <ScalarProperty Name="AUART_TXT" ColumnName="AUART_TXT" />
+          <ScalarProperty Name="PLNBEZ" ColumnName="PLNBEZ" />
+          <ScalarProperty Name="MAKTX" ColumnName="MAKTX" />
+          <ScalarProperty Name="GAMNG" ColumnName="GAMNG" />
+          <ScalarProperty Name="GASMG" ColumnName="GASMG" />
+          <ScalarProperty Name="GMEIN" ColumnName="GMEIN" />
+          <ScalarProperty Name="LGORT" ColumnName="LGORT" />
+          <ScalarProperty Name="KDAUF" ColumnName="KDAUF" />
+          <ScalarProperty Name="KDPOS" ColumnName="KDPOS" />
+          <ScalarProperty Name="KWMENG" ColumnName="KWMENG" />
+          <ScalarProperty Name="EDATU" ColumnName="EDATU" />
+          <ScalarProperty Name="KUNNR" ColumnName="KUNNR" />
+          <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+          <ScalarProperty Name="KDMAT" ColumnName="KDMAT" />
+          <ScalarProperty Name="POSTX" ColumnName="POSTX" />
+          <ScalarProperty Name="BSTNK" ColumnName="BSTNK" />
+          <ScalarProperty Name="ZLABELSIZE" ColumnName="ZLABELSIZE" />
+          <ScalarProperty Name="ZMFD" ColumnName="ZMFD" />
+          <ScalarProperty Name="ZMOILD" ColumnName="ZMOILD" />
+          <ScalarProperty Name="PRCTR" ColumnName="PRCTR" />
+          <ScalarProperty Name="KTEXT" ColumnName="KTEXT" />
+          <ScalarProperty Name="LVORM" ColumnName="LVORM" />
+          <ScalarProperty Name="ZTECO" ColumnName="ZTECO" />
+          <ScalarProperty Name="ERNAM_W" ColumnName="ERNAM_W" />
+          <ScalarProperty Name="CN_CREATE_DATE" ColumnName="CN_CREATE_DATE" />
+          <ScalarProperty Name="ERNAM_R" ColumnName="ERNAM_R" />
+          <ScalarProperty Name="CN_CHANGE_DATE" ColumnName="CN_CHANGE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTIPP0002B">
+      <EntityTypeMapping TypeName="YonyuModel.ZTIPP0002B">
+        <MappingFragment StoreEntitySet="ZTIPP0002B">
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+          <ScalarProperty Name="VORNR" ColumnName="VORNR" />
+          <ScalarProperty Name="UVORN" ColumnName="UVORN" />
+          <ScalarProperty Name="ARBPL" ColumnName="ARBPL" />
+          <ScalarProperty Name="KTEXT" ColumnName="KTEXT" />
+          <ScalarProperty Name="STEUS" ColumnName="STEUS" />
+          <ScalarProperty Name="KTSCH" ColumnName="KTSCH" />
+          <ScalarProperty Name="LTXA1" ColumnName="LTXA1" />
+          <ScalarProperty Name="MGVRG" ColumnName="MGVRG" />
+          <ScalarProperty Name="ASVRG" ColumnName="ASVRG" />
+          <ScalarProperty Name="MEINH" ColumnName="MEINH" />
+          <ScalarProperty Name="BMSCH" ColumnName="BMSCH" />
+          <ScalarProperty Name="VGW01" ColumnName="VGW01" />
+          <ScalarProperty Name="VGE01" ColumnName="VGE01" />
+          <ScalarProperty Name="VGW02" ColumnName="VGW02" />
+          <ScalarProperty Name="VGE02" ColumnName="VGE02" />
+          <ScalarProperty Name="VGW03" ColumnName="VGW03" />
+          <ScalarProperty Name="VGE03" ColumnName="VGE03" />
+          <ScalarProperty Name="VGW04" ColumnName="VGW04" />
+          <ScalarProperty Name="VGE04" ColumnName="VGE04" />
+          <ScalarProperty Name="VGW05" ColumnName="VGW05" />
+          <ScalarProperty Name="VGE05" ColumnName="VGE05" />
+          <ScalarProperty Name="VGW06" ColumnName="VGW06" />
+          <ScalarProperty Name="VGE06" ColumnName="VGE06" />
+          <ScalarProperty Name="LOEKZ" ColumnName="LOEKZ" />
+          <ScalarProperty Name="ERNAM_W" ColumnName="ERNAM_W" />
+          <ScalarProperty Name="CN_CREATE_DATE" ColumnName="CN_CREATE_DATE" />
+          <ScalarProperty Name="ERNAM_R" ColumnName="ERNAM_R" />
+          <ScalarProperty Name="CN_CHANGE_DATE" ColumnName="CN_CHANGE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTIPP0003A">
+      <EntityTypeMapping TypeName="YonyuModel.ZTIPP0003A">
+        <MappingFragment StoreEntitySet="ZTIPP0003A">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+          <ScalarProperty Name="VORNR" ColumnName="VORNR" />
+          <ScalarProperty Name="ARBPL" ColumnName="ARBPL" />
+          <ScalarProperty Name="BUDAT" ColumnName="BUDAT" />
+          <ScalarProperty Name="ZMACHINE" ColumnName="ZMACHINE" />
+          <ScalarProperty Name="ZTYPE" ColumnName="ZTYPE" />
+          <ScalarProperty Name="LMNGA" ColumnName="LMNGA" />
+          <ScalarProperty Name="XMNGA" ColumnName="XMNGA" />
+          <ScalarProperty Name="ZUNIT1" ColumnName="ZUNIT1" />
+          <ScalarProperty Name="ZWORKHOUR" ColumnName="ZWORKHOUR" />
+          <ScalarProperty Name="ZEXWORKHOUR" ColumnName="ZEXWORKHOUR" />
+          <ScalarProperty Name="ZUNIT2" ColumnName="ZUNIT2" />
+          <ScalarProperty Name="ZEMPNUMBER" ColumnName="ZEMPNUMBER" />
+          <ScalarProperty Name="ZCOUNT" ColumnName="ZCOUNT" />
+          <ScalarProperty Name="RUECK" ColumnName="RUECK" />
+          <ScalarProperty Name="RMZHL" ColumnName="RMZHL" />
+          <ScalarProperty Name="ZBDCDT" ColumnName="ZBDCDT" />
+          <ScalarProperty Name="ZSTATUS" ColumnName="ZSTATUS" />
+          <ScalarProperty Name="ZLOG" ColumnName="ZLOG" />
+          <ScalarProperty Name="CN_FLAG" ColumnName="CN_FLAG" />
+          <ScalarProperty Name="ERNAM_W" ColumnName="ERNAM_W" />
+          <ScalarProperty Name="CN_CREATE_DATE" ColumnName="CN_CREATE_DATE" />
+          <ScalarProperty Name="ERNAM_R" ColumnName="ERNAM_R" />
+          <ScalarProperty Name="CN_CHANGE_DATE" ColumnName="CN_CHANGE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZTIPP0004A">
+      <EntityTypeMapping TypeName="YonyuModel.ZTIPP0004A">
+        <MappingFragment StoreEntitySet="ZTIPP0004A">
+          <ScalarProperty Name="APPLY_NO" ColumnName="APPLY_NO" />
+          <ScalarProperty Name="AUFNR" ColumnName="AUFNR" />
+          <ScalarProperty Name="WERKS" ColumnName="WERKS" />
+          <ScalarProperty Name="KTSCH" ColumnName="KTSCH" />
+          <ScalarProperty Name="LTXA1" ColumnName="LTXA1" />
+          <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+          <ScalarProperty Name="CHARG" ColumnName="CHARG" />
+          <ScalarProperty Name="MENGE" ColumnName="MENGE" />
+          <ScalarProperty Name="MEINS" ColumnName="MEINS" />
+          <ScalarProperty Name="LGORT" ColumnName="LGORT" />
+          <ScalarProperty Name="BUDAT" ColumnName="BUDAT" />
+          <ScalarProperty Name="ZSTATUS" ColumnName="ZSTATUS" />
+          <ScalarProperty Name="ZLOG" ColumnName="ZLOG" />
+          <ScalarProperty Name="MJAHR" ColumnName="MJAHR" />
+          <ScalarProperty Name="MBLNR" ColumnName="MBLNR" />
+          <ScalarProperty Name="CN_FLAG" ColumnName="CN_FLAG" />
+          <ScalarProperty Name="ERNAM_W" ColumnName="ERNAM_W" />
+          <ScalarProperty Name="CN_CREATE_DATE" ColumnName="CN_CREATE_DATE" />
+          <ScalarProperty Name="ERNAM_R" ColumnName="ERNAM_R" />
+          <ScalarProperty Name="CN_CHANGE_DATE" ColumnName="CN_CHANGE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApparadusConfig">
+      <EntityTypeMapping TypeName="YonyuModel.ApparadusConfig">
+        <MappingFragment StoreEntitySet="ApparadusConfig">
+          <ScalarProperty Name="Werk" ColumnName="Werk" />
+          <ScalarProperty Name="ApparadusID" ColumnName="ApparadusID" />
+          <ScalarProperty Name="ApparadusNo" ColumnName="ApparadusNo" />
+          <ScalarProperty Name="ApparadusName" ColumnName="ApparadusName" />
+          <ScalarProperty Name="ApparadusDescription" ColumnName="ApparadusDescription" />
+          <ScalarProperty Name="ApparadusMfgDate" ColumnName="ApparadusMfgDate" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DisableFlag" ColumnName="DisableFlag" />
+          <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+          <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BartenderConfig">
+      <EntityTypeMapping TypeName="YonyuModel.BartenderConfig">
+        <MappingFragment StoreEntitySet="BartenderConfig">
+          <ScalarProperty Name="bID" ColumnName="bID" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="LabelDescription" ColumnName="LabelDescription" />
+          <ScalarProperty Name="LabelTemplatePath" ColumnName="LabelTemplatePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerComplaintRecord">
+      <EntityTypeMapping TypeName="YonyuModel.CustomerComplaintRecord">
+        <MappingFragment StoreEntitySet="CustomerComplaintRecord">
+          <ScalarProperty Name="cID" ColumnName="cID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventCodeConfig">
+      <EntityTypeMapping TypeName="YonyuModel.EventCodeConfig">
+        <MappingFragment StoreEntitySet="EventCodeConfig">
+          <ScalarProperty Name="eID" ColumnName="eID" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactoryConfig">
+      <EntityTypeMapping TypeName="YonyuModel.FactoryConfig">
+        <MappingFragment StoreEntitySet="FactoryConfig">
+          <ScalarProperty Name="fID" ColumnName="fID" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+          <ScalarProperty Name="PalletCodePrefix" ColumnName="PalletCodePrefix" />
+          <ScalarProperty Name="SupportWorkCenter" ColumnName="SupportWorkCenter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FloorInventory">
+      <EntityTypeMapping TypeName="YonyuModel.FloorInventory">
+        <MappingFragment StoreEntitySet="FloorInventory">
+          <ScalarProperty Name="fID" ColumnName="fID" />
+          <ScalarProperty Name="PalletCode" ColumnName="PalletCode" />
+          <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+          <ScalarProperty Name="MaterialNo" ColumnName="MaterialNo" />
+          <ScalarProperty Name="FirstInStock" ColumnName="FirstInStock" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="CartonID" ColumnName="CartonID" />
+          <ScalarProperty Name="PcsCarton" ColumnName="PcsCarton" />
+          <ScalarProperty Name="FloorStockID" ColumnName="FloorStockID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupSet">
+      <EntityTypeMapping TypeName="YonyuModel.GroupSet">
+        <MappingFragment StoreEntitySet="GroupSet">
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="GroupNameCn" ColumnName="GroupNameCn" />
+          <ScalarProperty Name="GroupNameEn" ColumnName="GroupNameEn" />
+          <ScalarProperty Name="Reportlet" ColumnName="Reportlet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MachineConfig">
+      <EntityTypeMapping TypeName="YonyuModel.MachineConfig">
+        <MappingFragment StoreEntitySet="MachineConfig">
+          <ScalarProperty Name="fID" ColumnName="fID" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="WorkCenter" ColumnName="WorkCenter" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManufacturerConfig">
+      <EntityTypeMapping TypeName="YonyuModel.ManufacturerConfig">
+        <MappingFragment StoreEntitySet="ManufacturerConfig">
+          <ScalarProperty Name="Werk" ColumnName="Werk" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="DistinguishCode" ColumnName="DistinguishCode" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+          <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MoldConfig">
+      <EntityTypeMapping TypeName="YonyuModel.MoldConfig">
+        <MappingFragment StoreEntitySet="MoldConfig">
+          <ScalarProperty Name="Werk" ColumnName="Werk" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="MoldID" ColumnName="MoldID" />
+          <ScalarProperty Name="MoldNo" ColumnName="MoldNo" />
+          <ScalarProperty Name="MoldMfgDate" ColumnName="MoldMfgDate" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DisableFlag" ColumnName="DisableFlag" />
+          <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+          <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MoldIDAssociationConfig">
+      <EntityTypeMapping TypeName="YonyuModel.MoldIDAssociationConfig">
+        <MappingFragment StoreEntitySet="MoldIDAssociationConfig">
+          <ScalarProperty Name="MoldID" ColumnName="MoldID" />
+          <ScalarProperty Name="ApparadusID" ColumnName="ApparadusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MoldTransaction">
+      <EntityTypeMapping TypeName="YonyuModel.MoldTransaction">
+        <MappingFragment StoreEntitySet="MoldTransaction">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="Werk" ColumnName="Werk" />
+          <ScalarProperty Name="MoldID" ColumnName="MoldID" />
+          <ScalarProperty Name="ApparadusID" ColumnName="ApparadusID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Usage" ColumnName="Usage" />
+          <ScalarProperty Name="UsingDescription" ColumnName="UsingDescription" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="TransactionTypeNo" ColumnName="TransactionTypeNo" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+          <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PalletTag">
+      <EntityTypeMapping TypeName="YonyuModel.PalletTag">
+        <MappingFragment StoreEntitySet="PalletTag">
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="FactoryPrefix" ColumnName="FactoryPrefix" />
+          <ScalarProperty Name="PalletCode" ColumnName="PalletCode" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PostDateConfig">
+      <EntityTypeMapping TypeName="YonyuModel.PostDateConfig">
+        <MappingFragment StoreEntitySet="PostDateConfig">
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="PostDate" ColumnName="PostDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Production">
+      <EntityTypeMapping TypeName="YonyuModel.Production">
+        <MappingFragment StoreEntitySet="Production">
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="FactoryArea" ColumnName="FactoryArea" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+          <ScalarProperty Name="MaterialNo" ColumnName="MaterialNo" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="ProcessDescription" ColumnName="ProcessDescription" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="OrderQty" ColumnName="OrderQty" />
+          <ScalarProperty Name="CartonID" ColumnName="CartonID" />
+          <ScalarProperty Name="PcsCarton" ColumnName="PcsCarton" />
+          <ScalarProperty Name="ProductionQty" ColumnName="ProductionQty" />
+          <ScalarProperty Name="ScrapQty" ColumnName="ScrapQty" />
+          <ScalarProperty Name="PalletCode" ColumnName="PalletCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="QualityTime" ColumnName="QualityTime" />
+          <ScalarProperty Name="QualityShift" ColumnName="QualityShift" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="StockInOrderNo" ColumnName="StockInOrderNo" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="ProductionType" ColumnName="ProductionType" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Cavity" ColumnName="Cavity" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="ScrapDescription" ColumnName="ScrapDescription" />
+          <ScalarProperty Name="wID" ColumnName="wID" />
+          <ScalarProperty Name="Editor" ColumnName="Editor" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductionLog">
+      <EntityTypeMapping TypeName="YonyuModel.ProductionLog">
+        <MappingFragment StoreEntitySet="ProductionLog">
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="FactoryArea" ColumnName="FactoryArea" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+          <ScalarProperty Name="MaterialNo" ColumnName="MaterialNo" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="ProcessDescription" ColumnName="ProcessDescription" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="CartonID" ColumnName="CartonID" />
+          <ScalarProperty Name="PcsCarton" ColumnName="PcsCarton" />
+          <ScalarProperty Name="ProductionQty" ColumnName="ProductionQty" />
+          <ScalarProperty Name="ScrapQty" ColumnName="ScrapQty" />
+          <ScalarProperty Name="PalletCode" ColumnName="PalletCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="QualityTime" ColumnName="QualityTime" />
+          <ScalarProperty Name="QualityShift" ColumnName="QualityShift" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="StockInOrderNo" ColumnName="StockInOrderNo" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="ProductionType" ColumnName="ProductionType" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Cavity" ColumnName="Cavity" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="ScrapDescription" ColumnName="ScrapDescription" />
+          <ScalarProperty Name="wID" ColumnName="wID" />
+          <ScalarProperty Name="Editor" ColumnName="Editor" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectCodeConfig">
+      <EntityTypeMapping TypeName="YonyuModel.ProjectCodeConfig">
+        <MappingFragment StoreEntitySet="ProjectCodeConfig">
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QualityInvalidRecord">
+      <EntityTypeMapping TypeName="YonyuModel.QualityInvalidRecord">
+        <MappingFragment StoreEntitySet="QualityInvalidRecord">
+          <ScalarProperty Name="qID" ColumnName="qID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="FirstItemQuality" ColumnName="FirstItemQuality" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Hour" ColumnName="Hour" />
+          <ScalarProperty Name="Minute" ColumnName="Minute" />
+          <ScalarProperty Name="KeepQty" ColumnName="KeepQty" />
+          <ScalarProperty Name="KeepStartCartonID" ColumnName="KeepStartCartonID" />
+          <ScalarProperty Name="KeepEndCartonID" ColumnName="KeepEndCartonID" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="WorkingTime" ColumnName="WorkingTime" />
+          <ScalarProperty Name="ScrapQty" ColumnName="ScrapQty" />
+          <ScalarProperty Name="Mold" ColumnName="Mold" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReworkScrapRecord">
+      <EntityTypeMapping TypeName="YonyuModel.ReworkScrapRecord">
+        <MappingFragment StoreEntitySet="ReworkScrapRecord">
+          <ScalarProperty Name="rID" ColumnName="rID" />
+          <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="ProcessDescription" ColumnName="ProcessDescription" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="ReworkScrapQty" ColumnName="ReworkScrapQty" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScrapRecord">
+      <EntityTypeMapping TypeName="YonyuModel.ScrapRecord">
+        <MappingFragment StoreEntitySet="ScrapRecord">
+          <ScalarProperty Name="sID" ColumnName="sID" />
+          <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="ProcessDescription" ColumnName="ProcessDescription" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="ScrapQty" ColumnName="ScrapQty" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockConfig">
+      <EntityTypeMapping TypeName="YonyuModel.StockConfig">
+        <MappingFragment StoreEntitySet="StockConfig">
+          <ScalarProperty Name="sID" ColumnName="sID" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="StockName" ColumnName="StockName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockInOrder">
+      <EntityTypeMapping TypeName="YonyuModel.StockInOrder">
+        <MappingFragment StoreEntitySet="StockInOrder">
+          <ScalarProperty Name="soID" ColumnName="soID" />
+          <ScalarProperty Name="StockInOrderNo" ColumnName="StockInOrderNo" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="PalletCodes" ColumnName="PalletCodes" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionConfig">
+      <EntityTypeMapping TypeName="YonyuModel.TransactionConfig">
+        <MappingFragment StoreEntitySet="TransactionConfig">
+          <ScalarProperty Name="Werk" ColumnName="Werk" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="TransactionTypeNo" ColumnName="TransactionTypeNo" />
+          <ScalarProperty Name="TransactionTypeName" ColumnName="TransactionTypeName" />
+          <ScalarProperty Name="Plus_Minus_Code" ColumnName="Plus-Minus Code" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+          <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserData">
+      <EntityTypeMapping TypeName="YonyuModel.UserData">
+        <MappingFragment StoreEntitySet="UserData">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="NameCn" ColumnName="NameCn" />
+          <ScalarProperty Name="NameEn" ColumnName="NameEn" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkerConfig">
+      <EntityTypeMapping TypeName="YonyuModel.WorkerConfig">
+        <MappingFragment StoreEntitySet="WorkerConfig">
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="WorkerId" ColumnName="WorkerId" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="WorkerNo" ColumnName="WorkerNo" />
+          <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkingHours">
+      <EntityTypeMapping TypeName="YonyuModel.WorkingHours">
+        <MappingFragment StoreEntitySet="WorkingHours">
+          <ScalarProperty Name="wID" ColumnName="wID" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="ProcessDescription" ColumnName="ProcessDescription" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="WorkingTime" ColumnName="WorkingTime" />
+          <ScalarProperty Name="AbnormalTime" ColumnName="AbnormalTime" />
+          <ScalarProperty Name="Workers" ColumnName="Workers" />
+          <ScalarProperty Name="OperationType" ColumnName="OperationType" />
+          <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+          <ScalarProperty Name="ProductionType" ColumnName="ProductionType" />
+          <ScalarProperty Name="Mold" ColumnName="Mold" />
+          <ScalarProperty Name="Test" ColumnName="Test" />
+          <ScalarProperty Name="Malfunction" ColumnName="Malfunction" />
+          <ScalarProperty Name="Adjustment" ColumnName="Adjustment" />
+          <ScalarProperty Name="MaterialAbnormal" ColumnName="MaterialAbnormal" />
+          <ScalarProperty Name="MoldAbnormal" ColumnName="MoldAbnormal" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="InvalidTime" ColumnName="InvalidTime" />
+          <ScalarProperty Name="InvalidDescription" ColumnName="InvalidDescription" />
+          <ScalarProperty Name="MoldNo" ColumnName="MoldNo" />
+          <ScalarProperty Name="MoldName" ColumnName="MoldName" />
+          <ScalarProperty Name="DepartmentNo" ColumnName="DepartmentNo" />
+          <ScalarProperty Name="MoldStatus" ColumnName="MoldStatus" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="ProductionQty" ColumnName="ProductionQty" />
+          <ScalarProperty Name="QualifiedQty" ColumnName="QualifiedQty" />
+          <ScalarProperty Name="ScrapQty" ColumnName="ScrapQty" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Editor" ColumnName="Editor" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkingHoursDescription">
+      <EntityTypeMapping TypeName="YonyuModel.WorkingHoursDescription">
+        <MappingFragment StoreEntitySet="WorkingHoursDescription">
+          <ScalarProperty Name="wID" ColumnName="wID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="WorkorderNo" ColumnName="WorkorderNo" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+          <ScalarProperty Name="MtTypeItems" ColumnName="MtTypeItems" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="DtTypeItems" ColumnName="DtTypeItems" />
+          <ScalarProperty Name="InvalidDescription" ColumnName="InvalidDescription" />
+          <ScalarProperty Name="Improve" ColumnName="Improve" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="LmTime" ColumnName="LmTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YearShiftConfig">
+      <EntityTypeMapping TypeName="YonyuModel.YearShiftConfig">
+        <MappingFragment StoreEntitySet="YearShiftConfig">
+          <ScalarProperty Name="yID" ColumnName="yID" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="ShiftID" ColumnName="ShiftID" />
+          <ScalarProperty Name="ShiftIndex" ColumnName="ShiftIndex" />
+          <ScalarProperty Name="DayNight" ColumnName="DayNight" />
+          <ScalarProperty Name="ShiftStart" ColumnName="ShiftStart" />
+          <ScalarProperty Name="ShiftEnd" ColumnName="ShiftEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
