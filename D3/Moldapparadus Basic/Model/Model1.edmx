@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbErp1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'YonYu.dbo.ApparadusConfig' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="ApparadusConfig">
+          <Key>
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="ApparadusID" />
+            <PropertyRef Name="ApparadusNo" />
+            <PropertyRef Name="ApparadusName" />
+            <PropertyRef Name="ApparadusDescription" />
+            <PropertyRef Name="ApparadusMfgDate" />
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="DisableFlag" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="Werk" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ApparadusID" Type="bigint" Nullable="false" />
+          <Property Name="ApparadusNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApparadusName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApparadusDescription" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ApparadusMfgDate" Type="date" Nullable="false" />
+          <Property Name="ManufacturerID" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DisableFlag" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="LmDate" Type="date" Nullable="false" />
+          <Property Name="LmBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MoldTransaction">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="TransactionID" Type="bigint" Nullable="false" />
+          <Property Name="Werk" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="MoldID" Type="bigint" Nullable="false" />
+          <Property Name="ApparadusID" Type="bigint" Nullable="false" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Usage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UsingDescription" Type="nvarchar" MaxLength="250" />
+          <Property Name="Comment" Type="nvarchar" MaxLength="250" />
+          <Property Name="TransactionTypeNo" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LmDate" Type="date" Nullable="false" />
+          <Property Name="LmBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="dbErp1ModelStoreContainer">
+          <EntitySet Name="MoldTransaction" EntityType="Self.MoldTransaction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApparadusConfig" EntityType="Self.ApparadusConfig" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ApparadusConfig].[Werk] AS [Werk], 
+    [ApparadusConfig].[ApparadusID] AS [ApparadusID], 
+    [ApparadusConfig].[ApparadusNo] AS [ApparadusNo], 
+    [ApparadusConfig].[ApparadusName] AS [ApparadusName], 
+    [ApparadusConfig].[ApparadusDescription] AS [ApparadusDescription], 
+    [ApparadusConfig].[ApparadusMfgDate] AS [ApparadusMfgDate], 
+    [ApparadusConfig].[ManufacturerID] AS [ManufacturerID], 
+    [ApparadusConfig].[CreateDate] AS [CreateDate], 
+    [ApparadusConfig].[CreatedBy] AS [CreatedBy], 
+    [ApparadusConfig].[DisableFlag] AS [DisableFlag], 
+    [ApparadusConfig].[LmDate] AS [LmDate], 
+    [ApparadusConfig].[LmBy] AS [LmBy]
+    FROM [dbo].[ApparadusConfig] AS [ApparadusConfig]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbErp1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MoldTransaction">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="TransactionID" Type="Int64" Nullable="false" />
+          <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MoldID" Type="Int64" Nullable="false" />
+          <Property Name="ApparadusID" Type="Int64" Nullable="false" />
+          <Property Name="Quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Usage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UsingDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Comment" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionTypeNo" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ApparadusConfig">
+          <Key>
+            <PropertyRef Name="Werk" />
+            <PropertyRef Name="ApparadusID" />
+            <PropertyRef Name="ApparadusNo" />
+            <PropertyRef Name="ApparadusName" />
+            <PropertyRef Name="ApparadusDescription" />
+            <PropertyRef Name="ApparadusMfgDate" />
+            <PropertyRef Name="ManufacturerID" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="DisableFlag" />
+            <PropertyRef Name="LmDate" />
+            <PropertyRef Name="LmBy" />
+          </Key>
+          <Property Name="Werk" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ApparadusID" Type="Int64" Nullable="false" />
+          <Property Name="ApparadusNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ApparadusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ApparadusDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ApparadusMfgDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ManufacturerID" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DisableFlag" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LmDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LmBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="dbErp1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MoldTransaction" EntityType="Self.MoldTransaction" />
+          <EntitySet Name="ApparadusConfig" EntityType="Self.ApparadusConfig" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbErp1ModelStoreContainer" CdmEntityContainer="dbErp1Entities">
+          <EntitySetMapping Name="MoldTransaction">
+            <EntityTypeMapping TypeName="dbErp1Model.MoldTransaction">
+              <MappingFragment StoreEntitySet="MoldTransaction">
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="Werk" ColumnName="Werk" />
+                <ScalarProperty Name="MoldID" ColumnName="MoldID" />
+                <ScalarProperty Name="ApparadusID" ColumnName="ApparadusID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Usage" ColumnName="Usage" />
+                <ScalarProperty Name="UsingDescription" ColumnName="UsingDescription" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="TransactionTypeNo" ColumnName="TransactionTypeNo" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+                <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApparadusConfig">
+            <EntityTypeMapping TypeName="dbErp1Model.ApparadusConfig">
+              <MappingFragment StoreEntitySet="ApparadusConfig">
+                <ScalarProperty Name="Werk" ColumnName="Werk" />
+                <ScalarProperty Name="ApparadusID" ColumnName="ApparadusID" />
+                <ScalarProperty Name="ApparadusNo" ColumnName="ApparadusNo" />
+                <ScalarProperty Name="ApparadusName" ColumnName="ApparadusName" />
+                <ScalarProperty Name="ApparadusDescription" ColumnName="ApparadusDescription" />
+                <ScalarProperty Name="ApparadusMfgDate" ColumnName="ApparadusMfgDate" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="DisableFlag" ColumnName="DisableFlag" />
+                <ScalarProperty Name="LmDate" ColumnName="LmDate" />
+                <ScalarProperty Name="LmBy" ColumnName="LmBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
